@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../icons/fonts/icomoon.eot?3y1adz');
+    src:  url('../icons/fonts/icomoon.eot?3y1adz#iefix') format('embedded-opentype'),
+      url('../icons/fonts/icomoon.ttf?3y1adz') format('truetype'),
+      url('../icons/fonts/icomoon.woff?3y1adz') format('woff'),
+      url('../icons/fonts/icomoon.svg?3y1adz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .icon-info:before {
+    content: "\e900";
+  }
+  
+
+  body{
+    margin:0;
+    padding:0;
+  }
+  
+  .strength-meter {
+    position: relative;
+    height: 3px;
+    background: #ddd;
+    margin: 7px 0;
+    border-radius: 2px;
+  }
+  .strength-meter:before,
+  .strength-meter:after {
+    content: "";
+    height: inherit;
+    background: transparent;
+    display: block;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 6px 0;
+    position: absolute;
+    width: calc(20% + 6px);
+    z-index: 10;
+  }
+  .strength-meter:before {
+    left: calc(20% - 3px);
+  }
+  .strength-meter:after {
+    right: calc(20% - 3px);
+  }
+  
+  .strength-meter-fill {
+    background: transparent;
+    height: inherit;
+    position: absolute;
+    width: 0;
+    border-radius: inherit;
+    transition: width 0.5s ease-in-out, background 0.25s;
+  }
+  .strength-meter-fill[data-strength="0"] {
+    width: 20%;
+    background: darkred;
+  }
+  .strength-meter-fill[data-strength="1"] {
+    width: 40%;
+    background: orangered;
+  }
+  .strength-meter-fill[data-strength="2"] {
+    width: 60%;
+    background: orange;
+  }
+  .strength-meter-fill[data-strength="3"] {
+    width: 80%;
+    background: yellowgreen;
+  }
+  .strength-meter-fill[data-strength="4"] {
+    width: 100%;
+    background: green;
+  }
+  .password-count {
+    bottom: 16px;
+    right: 10px;
+    font-size: 1rem;
+  }  
+  [data-quantity] button{
+    font-family: 'icomoon' !important;    
+  }
+[data-quantity] button.sub:before{
+    content: "\e90a";
+}
+[data-quantity] button.add:before{
+  content: "\e90b";
+}
