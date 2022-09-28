@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/blockdash-ui/static/css/main.19b7663c.css",
-    "main.js": "/blockdash-ui/static/js/main.04bf07bb.js",
+    "main.js": "/blockdash-ui/static/js/main.d1e22afb.js",
     "static/js/787.23df9a89.chunk.js": "/blockdash-ui/static/js/787.23df9a89.chunk.js",
     "static/media/auth-bg.png": "/blockdash-ui/static/media/auth-bg.06bb6ffb01b21c0cc01c.png",
     "static/media/coinbasewallet.svg": "/blockdash-ui/static/media/coinbasewallet.b0368d8b708efb093a79d89bc1741f01.svg",
@@ -33,11 +33,11 @@
     "static/media/chip.svg": "/blockdash-ui/static/media/chip.fd6917ffda54cd24cb15fe1fd3d57021.svg",
     "static/media/creditcardblue.svg": "/blockdash-ui/static/media/creditcardblue.bf5a470dc1f9dd063a37be8c820b1be9.svg",
     "main.19b7663c.css.map": "/blockdash-ui/static/css/main.19b7663c.css.map",
-    "main.04bf07bb.js.map": "/blockdash-ui/static/js/main.04bf07bb.js.map",
+    "main.d1e22afb.js.map": "/blockdash-ui/static/js/main.d1e22afb.js.map",
     "787.23df9a89.chunk.js.map": "/blockdash-ui/static/js/787.23df9a89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.19b7663c.css",
-    "static/js/main.04bf07bb.js"
+    "static/js/main.d1e22afb.js"
   ]
 }
