@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/blockdash-ui/static/css/main.19b7663c.css",
+    "main.js": "/blockdash-ui/static/js/main.04bf07bb.js",
+    "static/js/787.23df9a89.chunk.js": "/blockdash-ui/static/js/787.23df9a89.chunk.js",
+    "static/media/auth-bg.png": "/blockdash-ui/static/media/auth-bg.06bb6ffb01b21c0cc01c.png",
+    "static/media/coinbasewallet.svg": "/blockdash-ui/static/media/coinbasewallet.b0368d8b708efb093a79d89bc1741f01.svg",
+    "static/media/title-img.png": "/blockdash-ui/static/media/title-img.71722cf1cdc90869cd5e.png",
+    "static/media/add-user-img.svg": "/blockdash-ui/static/media/add-user-img.1c19741de4deb5aa40e22d53126b4b5d.svg",
+    "static/media/card-icon.svg": "/blockdash-ui/static/media/card-icon.50b9ce5d4f8ac1a7cd28d4325d761197.svg",
+    "static/media/auth-img-right.png": "/blockdash-ui/static/media/auth-img-right.5944649ef77097d4cb30.png",
+    "static/media/card-walmart.svg": "/blockdash-ui/static/media/card-walmart.089558801bca15064e134b54430b7520.svg",
+    "static/media/card-amazon.svg": "/blockdash-ui/static/media/card-amazon.1e7690ae1d6e882e69aab88bd37e2d26.svg",
+    "static/media/metamask.svg": "/blockdash-ui/static/media/metamask.a622f6d2e20344567bfc5cc16ee603f7.svg",
+    "static/media/logo.svg": "/blockdash-ui/static/media/logo.ff8e316d6ff78e09e0bf4cd58e4ec4bd.svg",
+    "static/media/upload-icon.svg": "/blockdash-ui/static/media/upload-icon.7933bb9aa35f85ce17cca568cbcbd9cb.svg",
+    "static/media/us.svg": "/blockdash-ui/static/media/us.55720fd3aca14582ab7d34700b590198.svg",
+    "static/media/signal-logo.svg": "/blockdash-ui/static/media/signal-logo.2e973879fb513dc26546f561f184c1f9.svg",
+    "static/media/mx.svg": "/blockdash-ui/static/media/mx.8040311609c0446f02278636f9ce905a.svg",
+    "static/media/icomoon.svg?3y1adz": "/blockdash-ui/static/media/icomoon.08d94e0dd5f63c5a3922.svg",
+    "static/media/verification.svg": "/blockdash-ui/static/media/verification.408b5ea90a69a5875576e30f1c617988.svg",
+    "static/media/USA.svg": "/blockdash-ui/static/media/USA.7299a327275440cd9af383eb9495e3ca.svg",
+    "static/media/icomoon.eot?3y1adz": "/blockdash-ui/static/media/icomoon.543ef98c0c332d8cae15.eot",
+    "static/media/br.svg": "/blockdash-ui/static/media/br.be8e035057a73e07ab1999e70bbc5291.svg",
+    "static/media/edit.svg": "/blockdash-ui/static/media/edit.ca76abd8605687ef21f3ad0098c61f06.svg",
+    "static/media/icomoon.woff?3y1adz": "/blockdash-ui/static/media/icomoon.b2f5f0a339ce2a6f91da.woff",
+    "static/media/icomoon.ttf?3y1adz": "/blockdash-ui/static/media/icomoon.3d402b4ae7ae9e4ff1b3.ttf",
+    "static/media/ca.svg": "/blockdash-ui/static/media/ca.6afa34cfe67083ef4356a62efc082782.svg",
+    "index.html": "/blockdash-ui/index.html",
+    "static/media/check.svg": "/blockdash-ui/static/media/check.792dce5ddbc98a34200c9b41d1e8b3dd.svg",
+    "static/media/creditcardblack.svg": "/blockdash-ui/static/media/creditcardblack.76f5e49121250bac77b88b69b4bbda7f.svg",
+    "static/media/coinbase.svg": "/blockdash-ui/static/media/coinbase.53f9eaac52d523d4fcaf1d569baddf75.svg",
+    "static/media/chip.svg": "/blockdash-ui/static/media/chip.fd6917ffda54cd24cb15fe1fd3d57021.svg",
+    "static/media/creditcardblue.svg": "/blockdash-ui/static/media/creditcardblue.bf5a470dc1f9dd063a37be8c820b1be9.svg",
+    "main.19b7663c.css.map": "/blockdash-ui/static/css/main.19b7663c.css.map",
+    "main.04bf07bb.js.map": "/blockdash-ui/static/js/main.04bf07bb.js.map",
+    "787.23df9a89.chunk.js.map": "/blockdash-ui/static/js/787.23df9a89.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19b7663c.css",
+    "static/js/main.04bf07bb.js"
+  ]
+}
