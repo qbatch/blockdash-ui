@@ -45,7 +45,7 @@ const Index = () => {
               status="danger" className="password-input-primary"
             />
             <label className="d-flex justify-content-end forgot-password-link">
-              <a href="#">Forget your password</a>
+              <a href="reset-password">Forget your password</a>
             </label>
           </Box>
           <Box className="auth-content-bottom">
@@ -85,7 +85,7 @@ const Index = () => {
               </AuthConnect>
               <div className="already-account">
                 <label>
-                  Already have an account! <a href="#">Sign In</a>
+                  Already have an account! <a href="sign-in">Sign In</a>
                 </label>
               </div>
             </div>

@@ -62,7 +62,7 @@ const Index = () => {
           </Box>
           <Box className="auth-content-bottom">
             <div className="bottom-content">
-              <Button variant="outlined" color="primary" size="large" className="auth-btn">
+              <Button variant="outlined" color="primary" size="large">
                 Register
               </Button>
               <AuthConnect>
@@ -90,7 +90,7 @@ const Index = () => {
               </AuthConnect>
               <div className="already-account">
                 <label>
-                  Already have an account! <a href="#">Sign In</a>
+                  Already have an account! <a href="sign-in">Sign In</a>
                 </label>
               </div>
             </div>

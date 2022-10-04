@@ -2,19 +2,20 @@ import React from "react";
 import Button from "../../../components/button/button.styled";
 import VerficationEmail from "../index";
 import Verification from "../../../static/images/verification.svg";
+import VerificationInput from "react-verification-input";
 import { Box } from "@mui/system";
 import { AuthConnect } from "../style";
 const Index = () => {
   return (
     <>
       <VerficationEmail>
-        <div className="auth-content auth-centered-content">
+        <div className="auth-content auth-topalign-content">
           <div className="auth-heading">
             <h1>Enter your Secret Code </h1>
           </div>
           <Box className="auth-content-top">
             <div className="secret-code">
-              
+                <VerificationInput length={4} />
             </div>
           </Box>
           <Box className="auth-content-bottom">
@@ -23,13 +24,12 @@ const Index = () => {
                 variant="outlined"
                 color="primary"
                 size="large"
-                className="auth-btn"
               >
                 Verify
               </Button>
               <div className="already-account">
                 <label>
-                  Don’t received an email <a href="#">Click Here</a>
+                Didn’t get a code? <a href="#">Click to resend</a>
                 </label>
               </div>
             </div>

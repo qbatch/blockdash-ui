@@ -12,7 +12,8 @@ const ButtonStyled = styled(Button)`
     margin-bottom: 0px;
     font-weight: 700;
     text-transform: none;
-    border: 1px solid ${({ theme }) => theme.colors.primaryColor};
+    /* border: 1px solid ${({ theme }) => theme.colors.primaryColor}; */
+    border: 0px;
     color: ${({ theme }) => theme.colors.onPrimary};
     background: linear-gradient(
       90deg,
@@ -22,6 +23,7 @@ const ButtonStyled = styled(Button)`
     &:hover {
       border: 1px solid ${({ theme }) => theme.colors.primaryColor};
       color: ${({ theme }) => theme.colors.onPrimary};
+      border: 0px;
     }
     ${(props) =>
       props.size === "large" &&
@@ -33,7 +35,7 @@ const ButtonStyled = styled(Button)`
       `
         background:#030715;
         border:0px;
-    &:before{
+      &:before{
       content:'';  background: linear-gradient(
       90deg,
       ${({ theme }) => theme.colors.primaryColor} 0%,
@@ -68,6 +70,14 @@ const ButtonStyled = styled(Button)`
       `
       }
   `}
+      ${(props) =>
+        props.variant === "text" &&
+        `
+        -webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+      `
+      }
   }
 `;
 export default ButtonStyled;

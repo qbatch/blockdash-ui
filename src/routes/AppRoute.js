@@ -1,108 +1,39 @@
 import React from "react";
 //Component
 import DashboardLayout from "../layout/component/index";
-import PurchaseOrder from "../container/dashboard/purchaseOrder/index";
-import PurchaseOrderDetails from "../container/dashboard/purchaseOrder/poDetail/index";
-import wareHouse from "../container/dashboard/wareHouse/index";
-import wareHouseDetail from "../container/dashboard/wareHouse/whDetail/index";
-import wareHouseDetailship from "../container/dashboard/wareHouse/whDetailship/index";
-import wareHouseInventory from "../container/dashboard/wareHouse/whInventory/";
-import UserInventory from '../container/dashboard/user/userInventory/index';
-import AdminInventory from '../container/dashboard/user/adminInventory/index';
-import User from '../container/dashboard/user/index';
-import UserPo from '../container/dashboard/user/userPo/index';
-import UserPoDetail from '../container/dashboard/user/userPoDetail/index';
-import SalesOrder from "../container/dashboard/salesOrder/index";
-import ShoppingCart from '../container/dashboard/shoppingCart/index';
-import Settings from '../container/dashboard/settings/index';
+import Dashboard from "../container/dashboard/statistics/index";
+import Wallet from "../container/dashboard/wallet/index";
+import WalletDetails from "../container/dashboard/wallet/walletDetail/index.js";
+import NftDashboard from "../container/dashboard/nftDashboard/index.js";
+
 import { Route, Routes } from "react-router-dom";
 
 const Index = () => {
   return (
     <Routes>
       <Route
-        path="/purchaseOrder"
+        path="/dashboard"
         exact
-        key="/purchaseOrder"
-        element={<DashboardLayout Component={PurchaseOrder} />}
+        key="/dashboard"
+        element={<DashboardLayout Component={Dashboard} />}
       />
       <Route
-        path="/PurchaseOrderDetails"
+        path="/wallet"
         exact
-        key="/PurchaseOrderDetails"
-        element={<DashboardLayout Component={PurchaseOrderDetails} />}
-      />
-       <Route
-        path="/wareHouse"
-        exact
-        key="/wareHouse"
-        element={<DashboardLayout Component={wareHouse} />}
-      />
-             <Route
-        path="/wareHouseDetail"
-        exact
-        key="/wareHouseDetail"
-        element={<DashboardLayout Component={wareHouseDetail} />}
+        key="/wallet"
+        element={<DashboardLayout Component={Wallet} />}
       />
       <Route
-        path="/wareHouseDetailship"
+        path="/walletDetails"
         exact
-        key="/wareHouseDetailship"
-        element={<DashboardLayout Component={wareHouseDetailship} />}
-      />
-        <Route
-        path="/wareHouseInventory"
-        exact
-        key="/wareHouseInventory"
-        element={<DashboardLayout Component={wareHouseInventory} />}
+        key="/walletDetails"
+        element={<DashboardLayout Component={WalletDetails} />}
       />
       <Route
-        path="/user"
+        path="/nft-dashboard"
         exact
-        key="/user"
-        element={<DashboardLayout Component={User} />}
-      />
-      <Route
-        path="/user-po"
-        exact
-        key="/user"
-        element={<DashboardLayout Component={UserPo} />}
-      />
-      <Route
-        path="/user-podetail"
-        exact
-        key="/user"
-        element={<DashboardLayout Component={UserPoDetail} />}
-      />
-      <Route
-        path="/userInventory"
-        exact
-        key="/userInventory"
-        element={<DashboardLayout Component={UserInventory} />}
-      />
-      <Route
-        path="/adminInventory"
-        exact
-        key="/adminInventory"
-        element={<DashboardLayout Component={AdminInventory} />}
-      />
-      <Route
-        path="/shoppingCart"
-        exact
-        key="/shoppingCart"
-        element={<DashboardLayout Component={ShoppingCart} />}
-      />
-      <Route
-        path="/salesOrder"
-        exact
-        key="/salesOrder"
-        element={<DashboardLayout Component={SalesOrder} />}
-      />
-      <Route
-        path="/settings"
-        exact
-        key="/settings"
-        element={<DashboardLayout Component={Settings} />}
+        key="/nft-dashboard"
+        element={<DashboardLayout Component={NftDashboard} />}
       />
     </Routes>
   );

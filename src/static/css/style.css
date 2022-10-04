@@ -24,9 +24,80 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  .icon-info:before {
-    content: "\e900";
+  .icon-arrow-left:before {
+    content: "\e917";
   }
+  
+.icon-wallet-coins:before {
+  content: "\e912";
+}
+.icon-plus:before {
+  content: "\e900";
+}
+.icon-arrow-right:before {
+  content: "\e902";
+}
+.icon-bell:before {
+  content: "\e903";
+}
+.icon-caret-down:before {
+  content: "\e904";
+}
+.icon-caret-left:before {
+  content: "\e905";
+}
+.icon-caret-right:before {
+  content: "\e906";
+}
+.icon-cross-o:before {
+  content: "\e907";
+}
+.icon-dots:before {
+  content: "\e908";
+}
+.icon-down-arrow:before {
+  content: "\e909";
+}
+.icon-eclipse:before {
+  content: "\e90a";
+}
+.icon-error:before {
+  content: "\e90b";
+}
+.icon-box-primary:before {
+  content: "\e90c";
+}
+.icon-box-secondary:before {
+  content: "\e90d";
+}
+.icon-wallet:before {
+  content: "\e90e";
+}
+.icon-info:before {
+  content: "\e90f";
+}
+.icon-link:before {
+  content: "\e910";
+}
+.icon-plus-o:before {
+  content: "\e911";
+}
+.icon-sorting-listing:before {
+  content: "\e913";
+}
+.icon-tick-o:before {
+  content: "\e914";
+}
+.icon-tick:before {
+  content: "\e915";
+}
+.icon-sorting-block:before {
+  content: "\e901";
+}
+.icon-arrow-up:before {
+  content: "\e916";
+}
+
   
 
   body{

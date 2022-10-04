@@ -8,7 +8,6 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { Container } from "@mui/system";
 // Importing Images
-import AuthImageLeft from "../../static/images/auth-img-left.png";
 import logo from "../../static/images/logo.svg";
 import { AuthWrapper } from "./style";
 const Index = (props) => {

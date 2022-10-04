@@ -1,11 +1,11 @@
-import Styled from 'styled-components';
-import { ProSidebar } from 'react-pro-sidebar';
+import Styled from "styled-components";
+import { ProSidebar } from "react-pro-sidebar";
 const SidebarWrapper = Styled(ProSidebar)`
 	color: ${({ theme }) => theme.colors.bodyText};
 	height:100vh;
     height: calc(100vh - 52px);
     overflow: auto;
-	z-index:9;
+	z-index:9; 
 	.pro-sidebar-inner {
 		background:${({ theme }) => theme.colors.secondaryColor};
 	}
@@ -224,23 +224,31 @@ const SidebarWrapper = Styled(ProSidebar)`
 
 const Content = Styled.div`
     width: 100%;
-    padding-top: 52px;
-    height: 100vh;
-    overflow: hidden;
-	display:flex ;
+    padding-top: 28px;
+    /* height: 100vh; */
+    /* overflow: hidden;
+	display:flex ; */
 	.dashboard-top-space{
-	padding-top:32px!important;
-	padding-bottom:0!important;
+		padding-left:35px;
+		padding-right:35px;
+		.dashboard-content {
+			.MuiContainer-root {
+			padding-left: 0;
+			padding-right: 0%;
+			}
+  }
 }
+
 `;
 const HeaderWrappper = Styled.div`
- height: 52px;
- background-color: ${({ theme }) => theme.colors.primaryColor};  
- position: fixed;
+height:auto;
+ /* background-color: ${({ theme }) => theme.colors.primaryColor};   */
+ background-color: #000000;  
+ /* position: fixed; */
  width:100%;
  z-index:99;
  /* padding:0px 12px; */
- padding: 0px 36px 0px 12px;
+ padding: 20px 24px 20px 35px;
  .header-wrapper{
 	 width:100%;
 	.header-logo {
@@ -250,9 +258,44 @@ const HeaderWrappper = Styled.div`
 		letter-spacing: 0px;
 		text-align: left;
 		color: ${({ theme }) => theme.colors.onPrimary};
-		/* margin-left:24px; */
-		margin-left:52px;
 		letter-spacing: -1px;
+	}
+	.header-menu{
+		list-style:none;
+		gap:32px;
+		li{
+			a{
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 18px;
+			letter-spacing: 0.02em;
+			color: #707C94;
+			display:block;
+			&:after{
+				content:'';
+				display:block;
+				margin-top:4px;
+				width:100%;
+				height:2px;
+				background-color:#000000;
+				transition: 0.3s all ease-in;
+			}
+			&:hover{
+				&:after{
+					background-color:#019371;
+				}
+				color:#019371;
+			}
+			}
+			&:hover{
+				a{
+				color:#019371;
+				&:after{
+					background-color:#019371;
+				}
+			}
+			}
+		}
 	}
 	button#dropdown-basic {
 	    width: 34px;
@@ -262,6 +305,10 @@ const HeaderWrappper = Styled.div`
 		color: ${({ theme }) => theme.colors.primaryColor};
 		font-size: ${({ theme }) => theme.colors.baseFontSize};;
 		border: none;
+		padding:0;
+		img{
+			width:100%;
+		}
 		&::after{
 			display:none;
 		} 
@@ -271,6 +318,63 @@ const HeaderWrappper = Styled.div`
 			right: 0;
 		}
 	}
+	.header-links{
+		ul{
+			display:flex;
+			gap:29px;
+			align-items:center;
+			li{
+				a{
+					i{
+						font-size:16px;
+						color:${({theme})=> theme.colors.secondaryColor};
+						position:relative;
+						&.icon-bell{
+							&:after{
+								content:'';
+								position:absolute;
+								width:5px;
+								height:5px;
+								background:${({theme})=> theme.colors.accentColorError};
+								border-radius:55px;
+								right: 1px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
  }
 `;
-export { Content, SidebarWrapper, HeaderWrappper };
+const FooterWrapper = Styled.div`
+background: #030715;
+box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.05);
+backdrop-filter: blur(13.5914px);
+padding-left:35px;
+padding-right:35px;
+font-weight: 300;
+font-size: 13px;
+line-height: 18px;
+letter-spacing: 0.02em;
+color: #6B7891;
+padding-top:12px;
+padding-bottom:32px;
+margin-top:20px;
+p{
+	margin-bottom:0;
+}
+.footer-menu{
+	gap:32px;
+	li{
+		a{
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 18px;
+			letter-spacing: 0.02em;
+			color: #6B7891;
+		}
+	}
+}
+`;
+export { Content, SidebarWrapper, HeaderWrappper, FooterWrapper };

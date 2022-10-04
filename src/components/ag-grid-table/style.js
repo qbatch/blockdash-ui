@@ -6,8 +6,8 @@ const GridWrapper = Styled.div`
     font-family: 'Inter';
     padding-top: 0px;
     padding-left: 0px;
-    font-family:inter;
     font-weight:400;
+    overflow:auto;
 }
  .QB-dataTable.drawer-table{
     height: calc(100vh - 766px);
@@ -24,34 +24,36 @@ const GridWrapper = Styled.div`
     
 }
 .QB_dataTable .ag-cell{
-    border-bottom:1px solid ${({theme}) => theme.colors.secondaryVariant};
+    border-bottom:1px solid ${({theme}) => theme.colors.borderColor};
 
 }
 .QB-dataTable .ag-header-viewport{
-    border-bottom:1px solid ${({theme}) => theme.colors.labelColor};
+    /* border-bottom:1px solid ${({theme}) => theme.colors.labelColor}; */
+    border-bottom:1px solid ${({theme}) => theme.colors.borderColor};
     border-radius: 4px 4px 0px 0px;
 }
 .QB-dataTable .ag-header-viewport .ag-header-cell{
     color: ${({theme}) => theme.colors.labelColor};
-    font-weight: 600;
+    font-weight: 500;
     font-size: ${({theme})=> theme.colors.baseFontSizeXs};
-    line-height: 12px;
+    line-height: 14px;
     padding: 10px 8px;
     &:first-of-type{
         padding-left:16px;
     }
 }
 .QB-dataTable .ag-header-viewport .ag-header-cell::after{
-    background-color: ${({theme}) => theme.colors.secondaryVariant};
+    background-color: ${({theme}) => theme.colors.borderColor};
     border-right:none;
 }
 .QB-dataTable .ag-center-cols-viewport .ag-cell-value{
     font-size: ${({theme})=> theme.colors.baseFontSize};
-    line-height: 16px;
-    color: ${({theme}) => theme.colors.bodyTextVariant};
+    line-height: 18px;
+    color: ${({theme}) => theme.colors.bodyText};
     display: flex;
     align-items:flex-start; 
     padding: 0 8px;
+    font-weight:300;
     &:first-of-type{
     }
 }
@@ -59,22 +61,22 @@ const GridWrapper = Styled.div`
     &:first-of-type{
         .ag-cell-wrapper{
             .ag-cell-value{
-                padding-left:16px;
+                padding-left:8px;
             }
         }
     }
     &:last-of-type{
         .ag-cell-wrapper{
             .ag-cell-value{
-                padding-right:18px;
+                padding-right:8px;
             }
         }
     }
 }
 .QB-dataTable .ag-center-cols-viewport .ag-cell-wrapper{
     height: auto;
-    min-height: 43px;
-    border-bottom: 1px solid ${({theme}) => theme.colors.secondaryVariant};
+    min-height: 56px;
+    border-bottom: 1px solid ${({theme}) => theme.colors.borderColor};
     a{
         color: ${({theme})=> theme.colors.primaryColor};
         text-decoration:none;
@@ -91,15 +93,15 @@ const GridWrapper = Styled.div`
 .QB-dataTable  .ag-row-even,
 .QB-dataTable  .ag-row-odd,
 .QB-dataTable  .ag-row{
-    border-bottom-color: ${({theme}) => theme.colors.secondaryVariant};
-    background-color:${({theme}) => theme.colors.background};
+    border-bottom-color: ${({theme}) => theme.colors.borderColor};
+    background-color:${({theme}) => theme.colors.surface};
 }
 
 .QB-dataTable  .ag-paging-panel{
 background-color: ${({theme}) => theme.colors.surface};
 }
 .QB-dataTable .ag-paging-button{
-    border-left: 1px solid ${({theme}) => theme.colors.secondaryVariant};
+    border-left: 1px solid ${({theme}) => theme.colors.borderColor};
     padding: 8px 8px 8px 10px;
     color: ${({theme}) => theme.colors.primaryVariant};
 }
@@ -113,6 +115,11 @@ background-color: ${({theme}) => theme.colors.surface};
 .QB-dataTable .ag-ltr .ag-side-bar-right{
     border: top 1px;
 
+}
+.title-image{
+    img{
+        margin-right:8px;
+    }
 }
 `;
 export { GridWrapper };

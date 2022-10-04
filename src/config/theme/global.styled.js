@@ -1,7 +1,7 @@
-import * as theme from './themeVariables'
+import * as theme from "./themeVariables";
 import { createGlobalStyle, ThemeConsumer } from "styled-components";
 
-const GlobalStyles = createGlobalStyle `
+const GlobalStyles = createGlobalStyle`
     body{
         background-color: ${({ theme }) => theme.colors.background};
         font-size:${({ theme }) => theme.colors.baseFontSize};
@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle `
         font-family: 'Inter';
     }
     a{
-        color:${({theme})=> theme.colors.primaryColor};
+        color:${({ theme }) => theme.colors.primaryColor};
         text-decoration:none;
     }
     ul{
@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle `
         list-style:none;
       }
     .title{
-        font-size:${({theme}) => theme.colors.baseFontSizeXl};
+        font-size:${({ theme }) => theme.colors.baseFontSizeXl};
         line-height:44px;
         margin-bottom:32px;
     }
@@ -55,7 +55,7 @@ const GlobalStyles = createGlobalStyle `
         margin-top:32px;
     }
     .stripe-input{
-        border: 1px solid ${({theme}) => theme.colors.secondaryVariant};
+        border: 1px solid ${({ theme }) => theme.colors.secondaryVariant};
         line-height:18px;
         border-radius:4px;
         color: ${({ theme }) => theme.colors.bodyText};
@@ -67,17 +67,18 @@ const GlobalStyles = createGlobalStyle `
         padding:30px 24px;
     }
     .primary-color{
-        color:${({theme})=> theme.colors.primaryColor};
+        color:${({ theme }) => theme.colors.primaryColor};
     }
     .cursor-pointer{
         cursor:pointer;
     }
     .text-success{
-        color:${({theme})=> theme.colors.accentColorSuccess}!important;
+        color:${({ theme }) => theme.colors.accentColorSuccess}!important;
     }
     .text-error{
-        color:${({theme})=> theme.colors.accentColorError}!important;   
+        color:${({ theme }) => theme.colors.accentColorError}!important;   
     }
+  
     .themeButtons
     {
         position:fixed;
@@ -88,6 +89,36 @@ const GlobalStyles = createGlobalStyle `
         button{
             margin-right:5px;
         }
+    }
+    .MuiPopover-root{
+        /* &.custom-dropdown{ */
+            .MuiPaper-root{
+                padding:24px;
+                background-color:#030715;
+                color: #707C94;
+                .MuiList-root{
+                    padding:0;  
+                    .MuiButtonBase-root{
+                        padding:0;
+                        margin-bottom:16px;
+                        font-weight: 300;
+                        font-size: 13px;
+                        line-height: 18px;
+                        letter-spacing: 0.02em;
+                        &:hover{
+                            color:#019371;
+                        }
+                        &:last-of-type{
+                            margin-bottom:0;
+                        }
+                        &.Mui-selected {
+                            background:none;
+                            color:#019371;
+                        }
+                    }
+                }
+            }
+        /* } */
     }
 `;
 export default GlobalStyles;

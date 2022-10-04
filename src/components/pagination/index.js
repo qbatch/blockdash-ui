@@ -6,9 +6,9 @@ import { PaginationWrapper } from "./style";
 
 const Pagination = () => {
   const options = [
-    { value: "15 / page", label: "10 / page" },
-    { value: "17 / page", label: "17 / page" },
-    { value: "10 / page", label: "10 / page" },
+    { title: "15 / page", value: "15 / page" },
+    { title: "17 / page", value: "17 / page" },
+    { title: "10 / page", value: "10 / page" },
   ];
   return (
     <PaginationWrapper className="pagination-wrapper d-flex align-items-center position-relative">
@@ -19,14 +19,14 @@ const Pagination = () => {
         <div className="d-flex justify-content-between align-items-center">
           <div className=" pagination-inputs-wrappper d-flex justify-content-between align-items-center">
             <Select
-              className="border-none"
+              className="pagination-days border-none"
               placeholder="10 / page"
-              options={options}
+              menuItem={options}
               width="68"
               menuPlacement="top"
             ></Select>
             <span className="">Go to</span>
-            <Input className="pagination-input" />
+            <Input height="32px" className="pagination-input" />
           </div>
           <div className="pagination-items-wrapper d-flex align-items-center">
           <button className="pagination-icon" >

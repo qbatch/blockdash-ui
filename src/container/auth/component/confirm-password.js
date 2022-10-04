@@ -43,13 +43,12 @@ const Index = () => {
                 variant="outlined"
                 color="primary"
                 size="large"
-                className="auth-btn"
               >
                 Confirm Password
               </Button>
               <div className="already-account">
                 <label>
-                  Don’t have an account! <a href="#">Sign Up</a>
+                  Don’t have an account! <a href="sign-up">Sign Up</a>
                 </label>
               </div>
             </div>

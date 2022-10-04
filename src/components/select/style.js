@@ -1,4 +1,4 @@
-import Styled from 'styled-components';
+import Styled from "styled-components";
 
 const SelectWrapper = Styled.div`
   label{
@@ -13,7 +13,8 @@ const SelectWrapper = Styled.div`
       width: ${(props) => props.width};
         &.error{
           .select2-selection__control{
-            border: 1px solid  ${({ theme }) => theme.colors.accentColorError}!important;
+            border: 1px solid  ${({ theme }) =>
+              theme.colors.accentColorError}!important;
           }
       }
      
@@ -27,7 +28,7 @@ const SelectWrapper = Styled.div`
   color: ${({ theme }) => theme.colors.labelColor};
 }
   .select2-selection__control {
-    border: 1px solid ${({theme})=> theme.colors.secondaryVariant};
+    border: 1px solid ${({ theme }) => theme.colors.secondaryVariant};
     max-height: 32px;
     min-height:32px;
     &:focus {
@@ -71,10 +72,66 @@ const SelectWrapper = Styled.div`
   .select2-selection__option{
     &.select2-selection__option--is-selected{
       span{
-        color:${({theme})=> theme.colors.onPrimary};
+        color:${({ theme }) => theme.colors.onPrimary};
       }
     }
   }
 }
+.MuiInputBase-root{
+  width:100%;
+      .MuiSelect-select{
+        /* border:0px; */
+        /* padding:0; */
+        color: #485666;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        border: 1px solid #485666;
+        padding:8px 16px;
+        padding-right:20px;
+        border-radius: 8px;
+      }
+      .MuiSvgIcon-root{
+        color:${({ theme }) => theme.colors.secondaryColor};
+        top: calc(48% - 0.5em);
+        right: 17px;
+      }
+      .MuiOutlinedInput-notchedOutline{
+        
+        border:transparent;
+        color: #9EA5B4;
+      }
+    }
+&.chart-time-select{
+    /* border:0px;
+    padding:0; */
+    .MuiInputBase-root{
+      .MuiSelect-select{
+        /* border:0px; */
+        /* padding:0; */
+        color: #9EA5B4;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 14px;
+        text-align: right;
+        letter-spacing: 0.02em;
+        padding-top:0;
+        padding-bottom:0;
+        padding-left: 0;
+        padding-right: 14px;
+        border:0px;
+      }
+      .MuiSvgIcon-root{
+        color:${({ theme }) => theme.colors.secondaryColor};
+        top: calc(48% - 0.5em);
+        right: -7px;
+      }
+      .MuiOutlinedInput-notchedOutline{
+        border:transparent;
+        color: #9EA5B4;
+      }
+    }
+  }
   `;
 export { SelectWrapper };

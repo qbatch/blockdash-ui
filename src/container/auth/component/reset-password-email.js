@@ -22,7 +22,7 @@ const Index = () => {
             </div>
             <div className="already-account email-receive">
               <label>
-              Don’t receive the email <a href="#">Click Here</a>
+                Don’t receive the email <a href="#">Click Here</a>
               </label>
             </div>
           </Box>
@@ -30,7 +30,7 @@ const Index = () => {
             <div className="bottom-content">
               <div className="already-account">
                 <label>
-                Don’t have an account!<a href="#">Sign Up</a>
+                  Don’t have an account!<a href="sign-up">Sign Up</a>
                 </label>
               </div>
             </div>

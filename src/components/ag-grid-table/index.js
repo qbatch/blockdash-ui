@@ -14,11 +14,12 @@ const Index = (props) => {
     sidebarOpen,
     height,
     rowHeight,
-    onSortChange
+    onSortChange,
+    className
   } = props;
 
   return (
-    <GridWrapper height={height}>
+    <GridWrapper height={height} className={className}>
       <div className={`ag-theme-balham QB-dataTable`}  >
         <AgGridReact
           reactNext={true}

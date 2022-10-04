@@ -9,9 +9,6 @@ import SignUp from "../container/auth/component/signup";
 import ResetPassword from "../container/auth/component/reset-password";
 import VerficationEmail from "../container/auth/component/verification-email";
 import ConfirmPassword from "../container/auth/component/confirm-password";
-import AddAmazonRegion from "../container/auth/component/add-amazon-region";
-import AddUser from "../container/auth/component/add-user";
-import AddPaymentMethod from "../container/auth/component/add-payment-method";
 const AuthRoute = () => {
   return (
     <Routes>
@@ -23,9 +20,6 @@ const AuthRoute = () => {
       <Route exact path="/auth/reset-password" element={<ResetPassword/>} />
       <Route exact path="/auth/verification-email" element={<VerficationEmail/>} />
       <Route exact path="/auth/confirm-password" element={<ConfirmPassword/>} />
-      <Route exact path="/auth/add-amazon-region" element={<AddAmazonRegion/>} />
-      <Route exact path="/auth/add-user" element={<AddUser/>} />
-      <Route exact path="/auth/add-payment" element={<AddPaymentMethod/>} />
     </Routes>
   );
 };
