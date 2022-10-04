@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/blockdash-ui/static/css/main.84921ebd.css",
-    "main.js": "/blockdash-ui/static/js/main.2875c571.js",
+    "main.js": "/blockdash-ui/static/js/main.3b619cdc.js",
     "static/js/787.23df9a89.chunk.js": "/blockdash-ui/static/js/787.23df9a89.chunk.js",
     "static/media/auth-bg.png": "/blockdash-ui/static/media/auth-bg.06bb6ffb01b21c0cc01c.png",
     "static/media/profile.svg": "/blockdash-ui/static/media/profile.2cf9a590ad99849be4b615ad3fbe80fe.svg",
@@ -44,11 +44,11 @@
     "static/media/chart2.svg": "/blockdash-ui/static/media/chart2.5de376b0d6aacf07ff524f8394d370a6.svg",
     "static/media/chart1small.svg": "/blockdash-ui/static/media/chart1small.4157be0febd81fe61137288980da3a59.svg",
     "main.84921ebd.css.map": "/blockdash-ui/static/css/main.84921ebd.css.map",
-    "main.2875c571.js.map": "/blockdash-ui/static/js/main.2875c571.js.map",
+    "main.3b619cdc.js.map": "/blockdash-ui/static/js/main.3b619cdc.js.map",
     "787.23df9a89.chunk.js.map": "/blockdash-ui/static/js/787.23df9a89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.84921ebd.css",
-    "static/js/main.2875c571.js"
+    "static/js/main.3b619cdc.js"
   ]
 }
