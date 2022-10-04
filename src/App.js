@@ -9,6 +9,7 @@ import AppRoute from "../src/routes/AppRoute";
 import GlobalStyles from "./config/theme/global.styled";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { darkTheme, lightTheme } from "../src/config/theme/themeVariables"
+
 function App() {
   const [selectedTheme, setSelectedTheme] = useState(lightTheme);
   const HandleThemeChange = (theme) => {
@@ -23,7 +24,7 @@ function App() {
     }
   }, []);
   return (
-    <BrowserRouter>
+    < BrowserRouter basename = "/blockdash-ui" >
       <ThemeProvider theme={selectedTheme}>
         <GlobalStyles />
         <div className="themeButtons">

@@ -2,6 +2,7 @@
   "name": "base-project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://qbatch.github.io/blockdash-ui/",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
@@ -30,6 +31,7 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.4.0",
     "react-switch": "^7.0.0",
+    "react-verification-input": "^3.1.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4",
     "zxcvbn": "^4.4.2"
