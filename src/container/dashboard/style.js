@@ -45,11 +45,11 @@ const DashboardWrapper = styled.div`
     background-clip: text;
     text-fill-color: transparent;
   }
-  .show-more-button {
-    max-width: 122px;
-    margin: 0 auto;
+  .show-more-button{
+    max-width:122px;
+    margin:0 auto;
     display: block;
-    margin-top: 32px;
+    margin-top:32px;
   }
 `;
 const PageHeader = styled.div`
@@ -62,7 +62,7 @@ const PageHeader = styled.div`
     color: #eff2f3;
     display: flex;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom:0;
     span {
       color: #1976d2;
     }
@@ -82,15 +82,6 @@ const PageHeader = styled.div`
     &.page-title-secondary {
       line-height: 24px;
     }
-  }
-  p {
-    margin-bottom: 0;
-    margin-top: 12px;
-    font-weight: 300;
-    font-size: 13px;
-    line-height: 18px;
-    letter-spacing: 0.02em;
-    color: #bfcbd1;
   }
   .page-header-extras {
     button {
