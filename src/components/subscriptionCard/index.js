@@ -1,12 +1,12 @@
 import React, { Children } from 'react';
-import { SubscriptionCard } from './style'
-const SubsCard = (props) => {
-    const { Children } = props;
+import { SubscriptionCardWrapper } from './style'
+const Index = (props) => {
+    const { children, className } = props;
     return (
-        <SubscriptionCard>
-            {Children}
-        </SubscriptionCard>
+        <SubscriptionCardWrapper className={className}>
+            {children}
+        </SubscriptionCardWrapper>
     )
 }
 
-export default SubsCard;
+export default Index;
