@@ -12,25 +12,25 @@ const Index = () => {
   return (
     <Routes>
       <Route
-        path="blockdash-ui/dashboard"
+        path="/dashboard"
         exact
         key="/dashboard"
         element={<DashboardLayout Component={Dashboard} />}
       />
       <Route
-        path="blockdash-ui/wallet"
+        path="/wallet"
         exact
         key="/wallet"
         element={<DashboardLayout Component={Wallet} />}
       />
       <Route
-        path="blockdash-ui/walletDetails"
+        path="/walletDetails"
         exact
         key="/walletDetails"
         element={<DashboardLayout Component={WalletDetails} />}
       />
       <Route
-        path="blockdash-ui/nft-dashboard"
+        path="/nft-dashboard"
         exact
         key="/nft-dashboard"
         element={<DashboardLayout Component={NftDashboard} />}

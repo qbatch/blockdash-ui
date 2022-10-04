@@ -12,14 +12,14 @@ import ConfirmPassword from "../container/auth/component/confirm-password";
 const AuthRoute = () => {
   return (
     <Routes>
-      <Route exact path="blockdash-ui/auth/reset-password-email" element={<ResetPasswordEmail />} />
-      <Route exact path="blockdash-ui/auth/secret-code" element={<SecretCode />} />
-      <Route exact path="blockdash-ui/auth/terms" element={<Terms />} />
-      <Route exact path="blockdash-ui/auth/sign-in" element={<SignIn />} />
-      <Route exact path="blockdash-ui/auth/sign-up" element={<SignUp/>} />
-      <Route exact path="blockdash-ui/auth/reset-password" element={<ResetPassword/>} />
-      <Route exact path="blockdash-ui/auth/verification-email" element={<VerficationEmail/>} />
-      <Route exact path="blockdash-ui/auth/confirm-password" element={<ConfirmPassword/>} />
+      <Route exact path="/auth/reset-password-email" element={<ResetPasswordEmail />} />
+      <Route exact path="/auth/secret-code" element={<SecretCode />} />
+      <Route exact path="/auth/terms" element={<Terms />} />
+      <Route exact path="/auth/sign-in" element={<SignIn />} />
+      <Route exact path="/auth/sign-up" element={<SignUp/>} />
+      <Route exact path="/auth/reset-password" element={<ResetPassword/>} />
+      <Route exact path="/auth/verification-email" element={<VerficationEmail/>} />
+      <Route exact path="/auth/confirm-password" element={<ConfirmPassword/>} />
     </Routes>
   );
 };
