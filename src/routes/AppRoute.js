@@ -6,7 +6,7 @@ import Wallet from "../container/dashboard/wallet/index";
 import WalletDetails from "../container/dashboard/wallet/walletDetail/index.js";
 import NftDashboard from "../container/dashboard/nftDashboard/index.js";
 import Payment from "../container/dashboard/payment/index";
-
+import AccountMangement from "../container/dashboard/accountMangement/Index"
 import { Route, Routes } from "react-router-dom";
 
 const Index = () => {
@@ -41,6 +41,10 @@ const Index = () => {
         exact
         key="/payment"
         element={<DashboardLayout Component={Payment} />}
+        path="/account-mangement"
+        exact
+        key="/account-mangement"
+        element={<DashboardLayout Component={AccountMangement} />}
       />
     </Routes>
   );

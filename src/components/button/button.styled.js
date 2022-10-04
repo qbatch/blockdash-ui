@@ -1,13 +1,12 @@
 import styled from "styled-components";
-// import Button from "react-bootstrap/Button";
 import { Button } from "@mui/material";
 const ButtonStyled = styled(Button)`
   &.MuiButton-root {
     font-size: 13px;
     line-height: 16px;
     padding: 12px 24px;
-    width: 100%;
-    margin: 0 auto;
+    /* width: 100%; */
+    /* margin: 0 auto; */
     border-radius: 8px;
     margin-bottom: 0px;
     font-weight: 700;
@@ -33,7 +32,7 @@ const ButtonStyled = styled(Button)`
     ${(props) =>
       props.variant === "outlined" &&
       `
-        background:#030715;
+        background:transparent;
         border:0px;
       &:before{
       content:'';  background: linear-gradient(
