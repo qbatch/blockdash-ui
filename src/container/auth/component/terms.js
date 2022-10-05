@@ -39,7 +39,7 @@ const Index = () => {
             </p>
           </div>
           <div className="auth-content-bottom">
-            <Button variant="outlined" size="large">
+            <Button className="w-100" variant="outlined" size="large">
               I Agree
             </Button>
           </div>

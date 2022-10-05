@@ -6,8 +6,8 @@ const ButtonStyled = styled(Button)`
     font-size: 13px;
     line-height: 16px;
     padding: 12px 24px;
-    width: 100%;
-    margin: 0 auto;
+    /* width: 100%;
+    margin: 0 auto; */
     border-radius: 8px;
     margin-bottom: 0px;
     font-weight: 700;

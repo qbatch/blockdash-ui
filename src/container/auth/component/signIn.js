@@ -50,11 +50,11 @@ const Index = () => {
           </Box>
           <Box className="auth-content-bottom">
             <div className="bottom-content">
-              <Button
+              <Button 
                 variant="outlined"
                 color="primary"
                 size="large"
-                className="auth-btn"
+                className="auth-btn w-100"
               >
                 Login
               </Button>

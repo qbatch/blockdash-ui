@@ -14,6 +14,7 @@ const NftDashboardWrapper = styled.div`
       background: #151a26;
       border-radius: 8px;
       border-bottom: 0px;
+      gap:0;
       li {
         .nav-link {
           padding: 10.75px 10px;

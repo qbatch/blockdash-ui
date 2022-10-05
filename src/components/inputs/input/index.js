@@ -30,11 +30,13 @@ const Index = (props) => {
     search,
     variant,
     size,
-    status
+    status,
+    multiline,
+    inputProps
   } = props;
   return (
     <InputWrapper className={className} width={width} height={height}>
-      <TextField
+      <TextField {...props}
         error={status}
         fullWidth
         size={size}
@@ -49,6 +51,8 @@ const Index = (props) => {
         disabled={disabled}
         placeholder={placeholder}
         type={type}
+        multiline={multiline}
+        as={as}
       />
       {/* <Form.Group className="position-relative input-wrapper">
         {label && <Form.Label>{label}</Form.Label>}

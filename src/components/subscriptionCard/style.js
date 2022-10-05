@@ -6,43 +6,83 @@ const SubscriptionCardWrapper = styled.div`
   margin-bottom: 24px;
   background: #151a26;
   border-radius: 8px;
-  &.active{
-    background: linear-gradient(90deg, #1976D2 0%, #009470 100%);
+  position: relative;
+  &:before {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      ${({ theme }) => theme.colors.primaryColor} 0%,
+      ${({ theme }) => theme.colors.secondaryColor} 100%
+    );
+    background: linear-gradient(
+        105deg,
+        ${({ theme }) => theme.colors.primaryColor} 0%,
+        ${({ theme }) => theme.colors.secondaryColor} 100%
+      )
+      no-repeat padding-box;
+    -webkit-mask: -webkit-linear-gradient(
+          345deg,
+          ${({ theme }) => theme.colors.primaryColor} 0%,
+          #7c0953 100%
+        )
+        content-box,
+      -webkit-linear-gradient(345deg, #f55d0d 0%, #7c0953 100%);
+    -webkit-mask-composite: xor;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1px;
+    border-radius: 8px;
+    transition: 0.3s all ease-in;
   }
+
   .subscription-card-header {
-    padding-bottom: 15px;
-    h2 {
+    padding-bottom: 0px;
+    h1 {
       font-weight: 700;
-      font-size: 36px;
-      line-height: 44px;
+      font-size: ${({ theme }) => theme.colors.baseFontSizeXl};
+      line-height: 42px;
       color: ${({ theme }) => theme.colors.onPrimary};
       margin-bottom: 0;
       strong {
         font-weight: 700;
-        font-size: ${({ theme }) => theme.colors.baseFontSize};
-        line-height: 16px;
+        font-size: ${({ theme }) => theme.colors.baseFontSizeXl};
+        line-height: 42px;
+        letter-spacing: 0.02em;
         margin-right: 4px;
         position: relative;
-        top: -2px;
-        left: -1px;
+        top: 0px;
       }
       small {
         font-weight: 400;
         font-size: ${({ theme }) => theme.colors.baseFontSizeXs};
-        line-height: 12px;
+        line-height: 14px;
         top: -2px;
         left: 4px;
         position: relative;
-        color: ${({ theme }) => theme.colors.labelColor};
+        color: ${({ theme }) => theme.colors.bodyText};
       }
     }
     p {
-      margin-top: 4px;
-      font-weight: 400;
+      margin-top: 12px;
+      font-weight: 300;
       font-size: ${({ theme }) => theme.colors.baseFontSize};
-      line-height: 16px;
+      line-height: 18px;
       color: ${({ theme }) => theme.colors.bodyText};
       margin-bottom: 0;
+    }
+    .tag {
+      background: ${({ theme }) => theme.colors.onPrimary};
+      color: ${({ theme }) => theme.colors.primaryColor};
+      border-radius: 24px;
+      padding: 4px 12px;
+      font-weight: 700;
+      font-size: ${({ theme }) => theme.colors.baseFontSize};
+      line-height: 16px;
     }
   }
   .subscription-card-content {
@@ -66,6 +106,14 @@ const SubscriptionCardWrapper = styled.div`
       margin-right: 99px;
       &:last-of-type {
         margin-right: 0;
+      }
+    }
+  }
+  &.active {
+    background: linear-gradient(90deg, #1976d2 0%, #009470 100%);
+    .subscription-card-header {
+      small {
+        color: ${({ theme }) => theme.colors.bodyText};
       }
     }
   }

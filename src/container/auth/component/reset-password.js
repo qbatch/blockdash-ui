@@ -29,7 +29,7 @@ const Index = () => {
                 variant="outlined"
                 color="primary"
                 size="large"
-                className="auth-btn"
+                className="auth-btn w-100"
               >
                 Reset Password
               </Button>

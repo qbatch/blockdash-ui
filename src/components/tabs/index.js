@@ -2,9 +2,9 @@ import React from "react";
 import Tab from "react-bootstrap/Tab";
 import { StyledTabs } from "./style";
 const Tabs = (props) => {
-  const { tabs, defaultActiveKey } = props;
+  const { tabs, defaultActiveKey, className } = props;
   return (
-    <StyledTabs defaultActiveKey={defaultActiveKey} className="mb-3">
+    <StyledTabs defaultActiveKey={defaultActiveKey} className={`mb-3 ${className}`}>
       {tabs?.map((tab, key) => {
         return (
           <Tab key={key} eventKey={tab.key} title={tab.title}>

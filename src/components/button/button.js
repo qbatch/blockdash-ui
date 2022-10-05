@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from 'prop-types';
 import ButtonStyled from "./button.styled";
 const Index = (props) => {
-  const {children, type,transparented,disabled,variant,color,size,onClick, width , className } = props;
+  const {children, type,transparented,disabled,variant,color,size,onClick, width , className, startIcon, endIcon } = props;
   return (
-    <ButtonStyled width={width} className={className} variant={variant} size={size} color={color} type={type} onClick={onClick}>
+    <ButtonStyled startIcon={startIcon} endIcon={endIcon} width={width} className={className} variant={variant} size={size} color={color} type={type} onClick={onClick}>
     {children}
     </ButtonStyled>
   );
