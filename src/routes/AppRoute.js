@@ -7,7 +7,9 @@ import WalletDetails from "../container/dashboard/wallet/walletDetail/index.js";
 import NftDashboard from "../container/dashboard/nftDashboard/index.js";
 import Payment from "../container/dashboard/payment/index";
 import Faq from "../container/dashboard/staticPages/faq";
-
+import Terms from "../container/dashboard/staticPages/termsConditions";
+import Privacy from "../container/dashboard/staticPages/privacyPolicy";
+import Roadmap from "../container/dashboard/staticPages/roadmap";
 import { Route, Routes } from "react-router-dom";
 
 const Index = () => {
@@ -48,6 +50,24 @@ const Index = () => {
         exact
         key="/faq"
         element={<DashboardLayout Component={Faq} />}
+      />
+      <Route
+        path="/terms"
+        exact
+        key="/terms"
+        element={<DashboardLayout Component={Terms} />}
+      />
+      <Route
+        path="/privacy"
+        exact
+        key="/privacy"
+        element={<DashboardLayout Component={Privacy} />}
+      />
+      <Route
+        path="/roadmap"
+        exact
+        key="/roadmap"
+        element={<DashboardLayout Component={Roadmap} />}
       />
     </Routes>
   );

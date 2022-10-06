@@ -52,6 +52,7 @@ const Index = (props) => {
           </Grid>
         </Grid>
       </Modal.Footer>
+      
     </ModalWrapper>
   );
 };

@@ -33,7 +33,8 @@ const ButtonStyled = styled(Button)`
     ${(props) =>
       props.variant === "outlined" &&
       `
-        background:#030715;
+        // background:#030715;
+        background:transparent;
         border:0px;
       &:before{
       content:'';  background: linear-gradient(

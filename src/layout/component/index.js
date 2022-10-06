@@ -10,7 +10,7 @@ const Layout = ({ Component }) => {
       <Header login={true} onClick={() => setCollapsed(!collapsed)} />
       <Content>
         {/* <Sidebar collapsed={collapsed} /> */}
-        <div className="dashboard-top-space overflow-auto w-100">
+        <div className="dashboard-top-space w-100">
           <Component />
         </div>
       </Content>

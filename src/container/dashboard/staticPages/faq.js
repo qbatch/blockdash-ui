@@ -3,7 +3,9 @@ import { Box } from "@mui/system";
 import Grid from "@mui/system/Unstable_Grid/Grid";
 import Accordion from "../../../components/accordion/index";
 import faqIcon from "../../../static/images/faq-icon.svg";
-import { DashboardWrapper } from "../style";
+import Input from "../../../components/inputs/input/index";
+import Button from '../../../components/button/button';
+import { ContactForm, DashboardWrapper } from "../style";
 import { FaqWrapper } from "./style";
 const Index = () => {
   const option = [
@@ -12,7 +14,8 @@ const Index = () => {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
+      title:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
@@ -24,11 +27,13 @@ const Index = () => {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      title: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title:
+        "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
     {
-      title: "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title:
+        "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     },
   ];
@@ -46,9 +51,26 @@ const Index = () => {
             <Grid item md={6}>
               <Box className="faq-header" textAlign={"center"}>
                 <img src={faqIcon} alt="faq heading" />
-                <h2>Frequently Asked Questions</h2>
+                <h1>Frequently Asked Questions</h1>
               </Box>
               <Accordion data={option} />
+              <ContactForm>
+                <Box className="form-header">
+                  <h3>Didn’t Find The Questions!</h3>
+                  <p>Send us your question</p>
+                </Box>
+                <Box className="form-content">
+                  <Input placeholder="Email address" label="Email address" />
+                  <Input
+                    multiline
+                    maxRows={3}
+                    minRows={3}
+                    placeholder="Your question..."
+                    label="Your question..."
+                  />
+                  <Button className="w-100" variant="outlined">Send</Button>
+                </Box>
+              </ContactForm>
             </Grid>
           </Grid>
         </FaqWrapper>
