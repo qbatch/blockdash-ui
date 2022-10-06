@@ -29,38 +29,39 @@ const Index = (props) => {
     className,
     closeText,
     saveText,
-    size,
+    maxWidth,
     closeButton,
     btnSaveVariant,
     btnCloseVariant,
-    btnDirection
+    btnDirection,
+    dialogActions
   } = props;
 
   return (
-    <ModalWrapper open={open} onClose={onClose} className={className}>
+    <ModalWrapper open={open} onClose={onClose} className={className} maxWidth={maxWidth}>
       {header && (
         <DialogTitle sx={{ m: 0, p: 2 }}>
           {header}
-          {/* {onClose ? (
+        </DialogTitle>
+      )}
+      <DialogContent dividers>
+      {onClose && 
             <IconButton
               aria-label="close"
               onClick={onClose}
               sx={{
-                position: "absolute",
-                right: 8,
-                top: 8,
-                color: (theme) => theme.palette.grey[500],
+                position:"absolute",
+                right:0,
+                top:0,
+                color:"#1976D2"
+
               }}
             >
               <CloseIcon />
-            </IconButton>
-          ) : null} */}
-        </DialogTitle>
-      )}
-      <DialogContent dividers>
+            </IconButton>}
         <Box>{props.children}</Box>
       </DialogContent>
-      <DialogActions>
+      {dialogActions &&      <DialogActions>
         <Grid container spacing={3} direction={btnDirection}>
           <Grid item md={6} xs={12}>
             <Button
@@ -78,7 +79,8 @@ const Index = (props) => {
             </Button>
           </Grid>
         </Grid>
-      </DialogActions>
+      </DialogActions>}
+  
       {/* {header && (
         <Modal.Header closeButton={closeButton}>
           <Modal.Title>{header}</Modal.Title>

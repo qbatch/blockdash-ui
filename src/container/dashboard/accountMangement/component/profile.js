@@ -3,8 +3,11 @@ import { AccountMangementWrapper } from "../style"
 import { Box, Stack, Divider, Grid } from "@mui/material"
 import Button from "../../../../components/button/button"
 import TextField from "../../../../components/inputs/input/index"
+import Modal from '../../../../components/modal/index';
+import { BsExclamationTriangle } from 'react-icons/bs';
 const Profile = () => {
     const [profileEdit, setProfileEdit] = useState(false)
+    const [deleteAccount,setDeleteAccount]=useState(false)
     return (
         <AccountMangementWrapper>
             <Box display="flex" justifyContent="space-between" alignItems="center" >
@@ -66,8 +69,25 @@ const Profile = () => {
                     <h3>Delete your Account</h3>
                     <p>Cancel account will lose access to data</p>
                 </Box>
-                <Button variant="outlined">Delete Account</Button>
+                <Button variant="outlined" onClick={()=>setDeleteAccount(true)}>Delete Account</Button>
             </Box>
+            <Modal
+                className="cancel-modal"
+                open={deleteAccount}
+                saveText="No"
+                closeText="Yes"
+                btnSaveVariant="outlined"
+                maxWidth="xs"
+                dialogActions="true"
+                onSave={()=>setDeleteAccount(false)}
+            >
+                <Box display="flex" alignItems="center" justifyContent="center" flexDirection="column">
+                <BsExclamationTriangle className="icon-exclamation" />
+                <h3>Are you sure you want to delete your account</h3>
+                <p>By canceling account you will lose
+                    access to data.</p>
+                    </Box>
+            </Modal>
         </AccountMangementWrapper>
     )
 }
