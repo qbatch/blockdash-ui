@@ -1,13 +1,16 @@
-import React from "react"
-import { Box, Grid,Link } from "@mui/material"
+import React,{useState} from "react"
+import { Box, Grid, Link } from "@mui/material"
 import { AccountMangementWrapper } from "../style"
 import TextField from "../../../../components/inputs/input/index"
 import Button from "../../../../components/button/button"
 import AgGrid from "../../../../components/ag-grid-table/index";
 import Pagination from "../../../../components/pagination/index";
 import LeroyDean from "../../../../static/images/Leroy-dean.svg"
+import Modal from '../../../../components/modal/index';
+import { BsCheckCircle } from "react-icons/bs"
 import metaMask from "../../../../static/images/meta-mask-small.svg"
 const Referral = () => {
+    const [copyLink,setCopyLink]=useState(false)
     const defaultColDef = {
         resizable: true,
         sortable: true,
@@ -117,21 +120,21 @@ const Referral = () => {
         {
             headerName: "Name",
             flex: 1,
-            minWidth:500,
+            minWidth: 500,
             field: "Invoice ID",
             cellRendererFramework: () => {
                 return (
-                  <div className="d-flex title-image align-items-center">
-                    <img width={"32px"} src={LeroyDean} alt="no-name" />
-                    Leroy Dean
-                  </div>
+                    <div className="d-flex title-image align-items-center">
+                        <img width={"32px"} src={LeroyDean} alt="no-name" />
+                        Leroy Dean
+                    </div>
                 );
-              },
+            },
         },
         {
             headerName: "Date",
             flex: 1,
-            minWidth:500,
+            minWidth: 500,
             field: "user",
             cellRenderer: ({ value }) => (value ? value : "October 18 2022"),
         },
@@ -141,12 +144,12 @@ const Referral = () => {
             field: "user",
             cellRendererFramework: () => {
                 return (
-                  <div className="d-flex title-image align-items-center">
-                    <img  src={metaMask} alt="no-reward" />
-                    MetaMask
-                  </div>
+                    <div className="d-flex title-image align-items-center">
+                        <img src={metaMask} alt="no-reward" />
+                        MetaMask
+                    </div>
                 );
-              },
+            },
         },
     ];
     return (
@@ -161,37 +164,53 @@ const Referral = () => {
                     }} display="flex" flexDirection="column" className="copy-url">
                         <span className="free-wallet">Reffer to a friend and get a <span>“Free Wallet”</span></span>
                         <Box sx={{
-                            margin:"27px 26px"
+                            margin: "27px 26px"
                         }}>
                             <TextField
                                 fullWidth
                             />
-                                 <Button fullWidth variant="outlined">Copy Link</Button>
+                            <Button fullWidth variant="outlined"   onClick={()=>setCopyLink(true)}>Copy Link</Button>
                         </Box>
                     </Box>
                 </Grid>
             </Grid>
             <Box sx={{
-                        marginTop: "50px"
-                    }}>
-                        <h1 className="payement-heading">Reffered Users</h1>
-                        <Box bgcolor="#030715" sx={{
-                            marginTop: "26px"
-                        }} borderRadius={2} p={3}>
-                            <div className="asset-content ">
-                                <AgGrid
-                                    height="240px"
-                                    columnDefinitions={columnDefinitions}
-                                    defaultColDef={defaultColDef}
-                                    user_referrals={user_referrals}
-                                    headerHeight={36}
-                                    rowHeight={56}
-                                    background="#030715"
-                                />
-                                <Pagination background="#030715" />
-                            </div>
-                        </Box>
+                marginTop: "50px"
+            }}>
+                <h1 className="payement-heading">Reffered Users</h1>
+                <Box bgcolor="#030715" sx={{
+                    marginTop: "26px"
+                }} borderRadius={2} p={3}>
+                    <div className="asset-content ">
+                        <AgGrid
+                            height="240px"
+                            columnDefinitions={columnDefinitions}
+                            defaultColDef={defaultColDef}
+                            user_referrals={user_referrals}
+                            headerHeight={36}
+                            rowHeight={56}
+                            background="#030715"
+                        />
+                        <Pagination background="#030715" />
+                    </div>
+                </Box>
+            </Box>
+            <Modal
+                className="cancel-modal"
+                open={copyLink}
+                maxWidth="xs"
+                onClose={()=>setCopyLink(false)}
+
+            >
+                <Box display="flex" alignItems="center" justifyContent="center" flexDirection="column">
+                    <Box sx={{ marginBottom: "28px" }}><BsCheckCircle color="13D802" fontSize={80} /></Box>
+                    <Box sx={{ marginBottom: "30px" }}>
+                        <h3>Link Copied</h3>
                     </Box>
+
+                    <p>Send this link to your frieds and get a  <b>”Free Wallet”</b></p>
+                </Box>
+            </Modal>
         </AccountMangementWrapper>
     )
 }
