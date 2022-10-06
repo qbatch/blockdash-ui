@@ -9,75 +9,49 @@ import { ReactComponent as IconStripe } from "../../../static/images/icon-stripe
 import { ReactComponent as IconGoogle } from "../../../static/images/icon-google.svg";
 import { ReactComponent as IconPaypal } from "../../../static/images/icon-paypal.svg";
 import { ReactComponent as IconCoinbase } from "../../../static/images/icon-coinbase.svg";
-import Tabs from "../../../components/tabs";
-
+import Tabs from "../../../components/tabs"
 import { DashboardWrapper, PageHeader } from "../style";
 import PaymentWrapper from "./style";
 const Index = () => {
-
   const tabs = [
     {
-      key: "Credit Card",
-      title: (
-        <div>
-          <IconCard /> Credit Card
-        </div>
-      ),
+      index: 0,
+      icon: <IconCard />,
+      label:"Credit Card",
+      component: <PaymentForm />,
+
+    },
+    {
+      index: 1,
+      icon: <IconStripe />,
+      label:"Stripe",
       component: <PaymentForm />,
     },
     {
-      key: "Stripe",
-      title: (
-        <div>
-          <IconStripe /> Stripe
-        </div>
-      ),
-      component: (
-        <>
-          <PaymentForm />
-        </>
-      ),
+      index: 2,
+      icon: <IconPaypal />,
+      label:"Paypal",
+      component: <PaymentForm />,
     },
     {
-      key: "Paypal",
-      title: (
-        <div>
-          <IconPaypal /> Paypal
-        </div>
-      ),
-      component: (
-        <>
-          <PaymentForm />
-        </>
-      ),
+      index: 3,
+      icon: <IconGoogle />,
+      label:"Google",
+      component: <PaymentForm />,
     },
     {
-      key: "Google",
-      title: (
-        <div>
-          <IconGoogle /> Google Pay
-        </div>
-      ),
-      component: (
-        <>
-          <PaymentForm />
-        </>
-      ),
+      index: 4,
+      icon: <IconCoinbase />,
+      label:"Coinbase Commerce Crypto",
+      component: <PaymentForm />,
     },
-    {
-      key: "Coinbase",
-      title: (
-        <div>
-          <IconCoinbase /> Coinbase Commerce Crypto
-        </div>
-      ),
-      component: (
-        <>
-          <PaymentForm />
-        </>
-      ),
-    },
-  ];
+  ]
+  const [value, setValue] =useState(0);
+  const [component, setComponet] = useState(tabs[0])
+  const handleChange = (event, newValue) => {
+    setComponet(tabs.find(x=> x.index === newValue));
+    setValue(newValue);
+  };
   return (
     <>
       <DashboardWrapper>
@@ -114,38 +88,41 @@ const Index = () => {
                       <Box className="subscription-card-header">
                         <Box
                           display="flex"
-                          alignItems="center"
-                          justifyContent="space-between"
-                        >
-                          <h1>
-                            <strong>$</strong>9.99<small>/month</small>
-                          </h1>
+                            alignItems="center"
+                            justifyContent="space-between"
+                          >
+                            <h1>
+                              <strong>$</strong>9.99<small>/month</small>
+                            </h1>
+                          </Box>
+                          <p>Subscribe to get unlimited features</p>
                         </Box>
-                        <p>Subscribe to get unlimited features</p>
-                      </Box>
-                    </SubscriptionCard>
-                  </Grid>
-                  <Grid item md={6}>
-                    <SubscriptionCard className="active">
-                      <Box className="subscription-card-header">
-                        <Box
-                          display="flex"
-                          alignItems="center"
-                          justifyContent="space-between"
-                        >
-                          <h1>
-                            <strong>$</strong>99.99<small>/Yearly</small>
-                          </h1>
-                          <span className="tag">2 Free Months</span>
+                      </SubscriptionCard>
+                    </Grid>
+                    <Grid item md={6}>
+                      <SubscriptionCard className="active">
+                        <Box className="subscription-card-header">
+                          <Box
+                            display="flex"
+                            alignItems="center"
+                            justifyContent="space-between"
+                          >
+                            <h1>
+                              <strong>$</strong>99.99<small>/Yearly</small>
+                            </h1>
+                            <span className="tag">2 Free Months</span>
+                          </Box>
+                          <p>Subscribe to get unlimited features</p>
                         </Box>
-                        <p>Subscribe to get unlimited features</p>
-                      </Box>
-                    </SubscriptionCard>
-                  </Grid>
-                  <Grid item md={12} className="payment-method">
-                    <div className="payment-form">
-                      <h3>Payment Method </h3>
-                      <Tabs defaultActiveKey={tabs[0].key} tabs={tabs} />
+                      </SubscriptionCard>
+                    </Grid>
+                    <Grid item md={12} className="payment-method">
+                      <div className="payment-form">
+                        <h3>Payment Method </h3>
+                        <Tabs value={value} tabs={tabs} handleChange={handleChange}  />
+                            <Box mt={4}>
+                              {component?.component}
+                            </Box>
                     </div>
                   </Grid>
                 </Grid>
