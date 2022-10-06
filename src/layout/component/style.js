@@ -224,7 +224,8 @@ const SidebarWrapper = Styled(ProSidebar)`
 
 const Content = Styled.div`
     width: 100%;
-    padding-top: 28px;
+    /* padding-top: 28px; */
+	padding-top: 20px;
     /* height: 100vh; */
     /* overflow: hidden;
 	display:flex ; */

@@ -1,17 +1,15 @@
 import styled from "styled-components";
-// import Button from "react-bootstrap/Button";
 import { Button } from "@mui/material";
 const ButtonStyled = styled(Button)`
   &.MuiButton-root {
     font-size: 13px;
     line-height: 16px;
     padding: 12px 24px;
-    /* width: 100%;
-    margin: 0 auto; */
     border-radius: 8px;
     margin-bottom: 0px;
     font-weight: 700;
     text-transform: none;
+    width: ${(props)=> props.fullWidth ? "100%" : ''};
     /* border: 1px solid ${({ theme }) => theme.colors.primaryColor}; */
     border: 0px;
     color: ${({ theme }) => theme.colors.onPrimary};
@@ -24,6 +22,9 @@ const ButtonStyled = styled(Button)`
       border: 1px solid ${({ theme }) => theme.colors.primaryColor};
       color: ${({ theme }) => theme.colors.onPrimary};
       border: 0px;
+    }
+    &.MuiButton-sizeLarge{
+      padding:13px 60px;
     }
     ${(props) =>
       props.size === "large" &&

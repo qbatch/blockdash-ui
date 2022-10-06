@@ -3,7 +3,7 @@ import styled from "styled-components";
 const PaginationWrapper = styled.div`
   width: 100%;
   height: 49px;
-  background: #151a26;
+  background-color:${(props) => props.background};
   /* position: fixed !important; */
   bottom: 0;
   width: calc(100%);

@@ -6,6 +6,7 @@ import Wallet from "../container/dashboard/wallet/index";
 import WalletDetails from "../container/dashboard/wallet/walletDetail/index.js";
 import NftDashboard from "../container/dashboard/nftDashboard/index.js";
 import Payment from "../container/dashboard/payment/index";
+import AccountMangement from "../container/dashboard/accountMangement/Index"
 import Faq from "../container/dashboard/staticPages/faq";
 import Terms from "../container/dashboard/staticPages/termsConditions";
 import Privacy from "../container/dashboard/staticPages/privacyPolicy";
@@ -44,6 +45,12 @@ const Index = () => {
         exact
         key="/payment"
         element={<DashboardLayout Component={Payment} />}
+        />
+        <Route
+        path="/account-mangement"
+        exact
+        key="/account-mangement"
+        element={<DashboardLayout Component={AccountMangement} />}
       />
       <Route
         path="/faq"

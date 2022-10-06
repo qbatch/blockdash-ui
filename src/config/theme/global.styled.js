@@ -10,6 +10,7 @@ const GlobalStyles = createGlobalStyle`
         line-height:normal;
         font-feature-settings: inherit;
         font-variant:inherit;
+        color:${({ theme }) => theme.colors.whiteColor}
     }
     h1,h2,h3,h4,h5,h6{
         font-weight:700;

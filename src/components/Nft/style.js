@@ -13,9 +13,10 @@ border-radius: 8px;
                 max-height:209px;
             }
         }
-        .nft-description
-        {
-            padding:16px;
+        .nft-description {
+            padding:11px 10px 12px 15px;
+            background: ${(props) => props.background};
+            border-radius: 0px 0px 12px 12px;
             .text-percentage{
                 margin-right:4px;
             }

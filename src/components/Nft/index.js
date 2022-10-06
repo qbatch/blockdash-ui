@@ -2,9 +2,9 @@ import React, { Children } from "react";
 import { NftWrapper } from "./style";
 import TimeChart from "../../static/images/small-chart.svg";
 const Index = (props) => {
-  const { Children, nftimage, name, icon, price } = props;
+  const { Children, nftimage, name, icon, price,background } = props;
   return (
-    <NftWrapper>
+    <NftWrapper background={background}>
       <div className="nft-image">
         {/* <img width={'100px'} src={nftpreview} alt="Nft Image" /> */}
         <img src={nftimage} alt="price icon"/> 
