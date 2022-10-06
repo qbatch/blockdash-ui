@@ -32,11 +32,11 @@ function a11yProps(index) {
 }
 
 export default function BasicTabs(props) {
-  const {tabs,handleChange,value,className}=props;
+  const {tabs,handleChange,value,className, parentClass}=props;
 
 
   return (
-    <StyledTabs>
+    <StyledTabs className={parentClass}>
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} className={className}>

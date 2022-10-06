@@ -180,224 +180,230 @@ const Index = () => {
     {
       index: 0,
       icon: <i className="icon-sorting-block"></i>,
-      label:"",
-      component:
-      <>
+      label: "",
+      component: (
+        <>
           <Grid container spacing={3}>
-               <Grid item md={12} xs={12}>
-                  <div className="d-flex nft-dashboard-header justify-content-between">
-                    <div className="nft-grid-title">
-                       <h3>NFT Gallery</h3>
-                    </div>
-                    <div className="nft-grid-filters">
-                       <ul className="d-flex">
-                        <li className="active">Asset</li>
-                         <li>Blockchain</li>
-                        <li>Wallet</li>
-                       </ul>
-                     </div>
+            <Grid item md={12} xs={12}>
+              <div className="d-flex nft-dashboard-header justify-content-between">
+                <div className="nft-grid-title">
+                  <h3>NFT Gallery</h3>
                 </div>
-               </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage2}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage3}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage4}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage5}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage6}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage2}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage3}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage4}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage5}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage6}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage2}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage3}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage4}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage5}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-                <Grid item md={2} xs={12}>
-                  <Nft
-                    nftimage={NftImage6}
-                    name="NFT Name"
-                    icon={EthIcon}
-                    price="1.25"
-                  />
-                </Grid>
-              </Grid>
-              <Button className="show-more-button" variant="text">
-                Show More
-              </Button>
-            </>,
-
+                <div className="nft-grid-filters">
+                  <ul className="d-flex">
+                    <li className="active">Asset</li>
+                    <li>Blockchain</li>
+                    <li>Wallet</li>
+                  </ul>
+                </div>
+              </div>
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage2}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage3}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage4}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage5}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage6}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage2}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage3}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage4}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage5}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage6}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage2}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage3}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage4}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage5}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+            <Grid item md={2} xs={12}>
+              <Nft
+                nftimage={NftImage6}
+                name="NFT Name"
+                icon={EthIcon}
+                price="1.25"
+              />
+            </Grid>
+          </Grid>
+          <Button className="show-more-button" variant="text">
+            Show More
+          </Button>
+        </>
+      ),
     },
     {
       index: 1,
       icon: <i className="icon-sorting-listing"></i>,
-      label:"",
-      component:  <>
-              <Grid container spacing={3}>
-                 <Grid item md={12} xs={12}>
-                   <div className="d-flex nft-dashboard-header justify-content-between">
-                     <div className="nft-grid-title">
-                       <h3>NFT Details</h3>
-                     </div>
-                     <div className="nft-grid-filters">
-                       <ul className="d-flex">
-                         <li className="active">Asset</li>
-                         <li>Blockchain</li>
-                         <li>Wallet</li>
-                       </ul>
-                     </div>
-                   </div>
-                 </Grid>
-                 <Grid item md={12} xs={12}>
-                   <div className="nft-details-table">
-                     <AgGrid
-                       height="240px"
-                       className=""
-                       columnDefinitions={columnDefinitions}
-                     defaultColDef={defaultColDef}
-                       user_referrals={user_referrals}
-                       headerHeight={54}
-                      rowHeight={56}
-                     />
-                     <Pagination />
-                   </div>
-                 </Grid>
-               </Grid>
-           </>,
-    }
-  ]
-  const [value, setValue] =useState(0);
-  const [component, setComponet] = useState(tabs[0])
+      label: "",
+      component: (
+        <>
+          <Grid container spacing={3}>
+            <Grid item md={12} xs={12}>
+              <div className="d-flex nft-dashboard-header justify-content-between">
+                <div className="nft-grid-title">
+                  <h3>NFT Details</h3>
+                </div>
+                <div className="nft-grid-filters">
+                  <ul className="d-flex">
+                    <li className="active">Asset</li>
+                    <li>Blockchain</li>
+                    <li>Wallet</li>
+                  </ul>
+                </div>
+              </div>
+            </Grid>
+            <Grid item md={12} xs={12}>
+              <div className="nft-details-table">
+                <AgGrid
+                  height="240px"
+                  className=""
+                  columnDefinitions={columnDefinitions}
+                  defaultColDef={defaultColDef}
+                  user_referrals={user_referrals}
+                  headerHeight={54}
+                  rowHeight={56}
+                />
+                <Pagination />
+              </div>
+            </Grid>
+          </Grid>
+        </>
+      ),
+    },
+  ];
+  const [value, setValue] = useState(0);
+  const [component, setComponet] = useState(tabs[0]);
   const handleChange = (event, newValue) => {
-    setComponet(tabs.find(x=> x.index === newValue));
+    setComponet(tabs.find((x) => x.index === newValue));
     setValue(newValue);
   };
   return (
     <>
       <DashboardWrapper>
         <PageHeader>
-          <Box display={'flex'} alignItems="center" justifyContent={'space-between'}>
+          <Box
+            display={"flex"}
+            alignItems="center"
+            justifyContent={"space-between"}
+          >
             <h1 className="page-title">NFT Dashboard</h1>
             <div className="page-header-extras">
               <ul>
@@ -479,10 +485,13 @@ const Index = () => {
               </Grid>
             </Grid>
             <NftDashboardWrapper>
-              <Tabs value={value} tabs={tabs} handleChange={handleChange} className="icon-tabs"  />
-                            <Box mt={4}>
-                              {component?.component}
-                            </Box>
+              <Tabs
+                value={value}
+                tabs={tabs}
+                handleChange={handleChange}
+                className="icon-tabs" parentClass="sorting-tabs"
+              />
+              <Box mt={4}>{component?.component}</Box>
             </NftDashboardWrapper>
           </Container>
         </div>
