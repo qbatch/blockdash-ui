@@ -15,6 +15,14 @@ import { WalletCard } from "./../style";
 
 const Index = () => {
   const [popup, setPopup] = useState(false);
+  // const [open, setOpen] = React.useState(false);
+
+  // const handleClickOpen = () => {
+  //   setOpen(true);
+  // };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
   const handleClickPopup = () => {
     setPopup(true);
   };
@@ -472,6 +480,7 @@ const Index = () => {
             saveText="Yes"
             closeText="No"
             onClose={() => setPopup(false)}
+            header="Hello World"
           >
             <i className="icon-error"></i>
             <h3>Are you sure you want to withdraw!</h3>

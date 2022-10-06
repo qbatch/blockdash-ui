@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Modal } from "react-bootstrap";
-const ModalWrapper = styled(Modal)`
+// import { Modal } from "react-bootstrap";
+import { Dialog } from "@mui/material";
+const ModalWrapper = styled(Dialog)`
   .select-address {
     .modal-header {
       border-bottom: none;
@@ -21,7 +22,7 @@ const ModalWrapper = styled(Modal)`
     padding-top: 0;
     padding-bottom: 24px;
   }
-  .modal-header {
+  .MuiDialog-root{
     padding-bottom: 32px;
     border-bottom: 0px;
   }
@@ -29,25 +30,6 @@ const ModalWrapper = styled(Modal)`
     max-width: 660px;
   }
 
-
-  /* .modal-body {
-    .row {
-      margin-left: -15px;
-      margin-right: -15px;
-    }
-    [class*="col-"] {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-    .input-wrapper {
-      padding-bottom: 9px;
-      line-height: 12px;
-    }
-    .form-label {
-      font-size: ${({ theme }) => theme.colors.baseFontSizeXs};
-      line-height: 12px;
-    }
-  } */
   .modal-title {
     font-size: ${({ theme }) => theme.colors.baseFontSizeLg};
     font-weight: 800;
