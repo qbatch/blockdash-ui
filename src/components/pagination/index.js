@@ -4,14 +4,15 @@ import Select from "../../components/select/index";
 import Input from "../../components/inputs/input/index";
 import { PaginationWrapper } from "./style";
 
-const Pagination = () => {
+const Pagination = (props) => {
+  const {background} =props
   const options = [
     { title: "15 / page", value: "15 / page" },
     { title: "17 / page", value: "17 / page" },
     { title: "10 / page", value: "10 / page" },
   ];
   return (
-    <PaginationWrapper className="pagination-wrapper d-flex align-items-center position-relative">
+    <PaginationWrapper background={background} className="pagination-wrapper d-flex align-items-center position-relative">
       <div className="pagination-wrapper d-flex justify-content-between align-items-center">
         <div>
           <span>Total 770 items</span>

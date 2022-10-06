@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Grid } from "@mui/material"
-import {OwnedNftWrapper} from "../style"
+import {AccountMangementWrapper} from "../style"
 import Button from "../../../../components/button/button";
 import MetaMask from "../../../../static/images/metamask.svg"
 import CoinBase from "../../../../static/images/coinbase.svg"
@@ -42,8 +42,8 @@ const wallets = () => {
         },
     ]
     return (
-        <OwnedNftWrapper >
-            <Box display="flex" justifyContent="space-between" alignItems="center">
+        <AccountMangementWrapper >
+            <Box display="flex" justifyContent="space-between" alignItems="center" >
                 <h1 className="heading">My Wallet</h1>
                 <Button variant="outlined">Connect Wallet</Button>
             </Box>
@@ -65,7 +65,7 @@ const wallets = () => {
                 </Grid>
                 </Box>
 
-        </OwnedNftWrapper>
+        </AccountMangementWrapper>
     )
 }
 export default wallets

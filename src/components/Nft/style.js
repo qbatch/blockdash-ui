@@ -14,7 +14,7 @@ border-radius: 8px;
             }
         }
         .nft-description {
-            padding:16px;
+            padding:11px 10px 12px 15px;
             background: ${(props) => props.background};
             border-radius: 0px 0px 12px 12px;
             .text-percentage{

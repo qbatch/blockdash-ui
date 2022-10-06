@@ -49,6 +49,8 @@ const theme = {
     bodyTextVariant: '#4E5969',
     labelColor: '#707C94',
     borderColor:'#2E3846',
+    whiteColor:'#ffff',
+    gradient:"linear-gradient(135deg, #FF0080 0%, #7928CA 100%)",
     // Accent Colors
     accentColorError: '#F31819',
     onaccentColorError: '#F31819',

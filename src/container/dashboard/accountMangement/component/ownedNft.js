@@ -3,10 +3,10 @@ import { Box, Grid } from "@mui/material"
 import Nft from "../../../../components/Nft/index";
 import NftImage from "../../../../static/images/nft-image.png";
 import EthIcon from "../../../../static/images/eth-icon.svg";
-import {OwnedNftWrapper} from "../style"
+import {AccountMangementWrapper} from "../style"
 const OwnedNft = () => {
     return (
-        <OwnedNftWrapper >
+        <AccountMangementWrapper >
             <Box display="flex" justifyContent="space-between">
                 <h1 className="heading">Owned NFT’S</h1>
                 <div className="order-list">
@@ -32,7 +32,7 @@ const OwnedNft = () => {
                 
             </Grid>
 
-        </OwnedNftWrapper>
+        </AccountMangementWrapper>
     )
 }
 export default OwnedNft

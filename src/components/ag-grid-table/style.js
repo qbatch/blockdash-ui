@@ -94,7 +94,8 @@ const GridWrapper = Styled.div`
 .QB-dataTable  .ag-row-odd,
 .QB-dataTable  .ag-row{
     border-bottom-color: ${({theme}) => theme.colors.borderColor};
-    background-color:${({theme}) => theme.colors.surface};
+    background-color:${(props) => props.background};
+
 }
 
 .QB-dataTable  .ag-paging-panel{

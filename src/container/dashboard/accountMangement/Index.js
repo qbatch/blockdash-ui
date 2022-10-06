@@ -4,9 +4,12 @@ import { Box, Grid } from "@mui/material"
 import Avatar from "../../../static/images/avatar.svg"
 import OwnedNft from "./component/ownedNft";
 import MyWallet from "./component/myWallet" 
+import BillingPlans from "./component/billingPlans"
+import Referral from "./component/referral";
+import Profile from  "./component/profile"
 import { DashboardWrapper } from "../style";
 const Index = () => {
-    const [selected, setSelected] = useState("wallets")
+    const [selected, setSelected] = useState("nft")
     const lists = [
         {
             title: "Owned NFTs",
@@ -20,7 +23,7 @@ const Index = () => {
         },
         {
             title: "Billing Details",
-            value: "Details",
+            value: "details",
             number: ''
         },
         {
@@ -72,7 +75,7 @@ const Index = () => {
                         <Grid item md={9}>
                             <Box className="content-box">
                             <div className="content">
-                            {selected === "nft" ? <OwnedNft /> : selected === "wallets" ?  <MyWallet /> : "null" }
+                            {selected === "nft" ? <OwnedNft /> : selected === "wallets" ?  <MyWallet /> : selected === "details" ? <BillingPlans /> : selected ===  "referral" ? <Referral /> : <Profile /> }
                             </div>
                             </Box>
                         </Grid>
