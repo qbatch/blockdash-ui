@@ -29,6 +29,9 @@ const PaymentWrapper = styled.div`
       }
       button{
         margin-top:8px;
+        &.nav-link{
+          margin-top:0;
+        }
       }
     }
   }

@@ -124,7 +124,7 @@ const InputWrapper = styled.div`
     }
     .MuiInputBase-root {
       border: 1px solid #485666;
-      input {
+      input,textarea {
         /* border: 1px solid ${({ theme }) => theme.colors.secondaryVariant}; */
         font-weight: 300;
         line-height: 24px;
@@ -147,6 +147,12 @@ const InputWrapper = styled.div`
         .card-input-wrapper & {
           padding-left: 44px;
         }
+      }
+      &.MuiInputBase-multiline{
+        max-height:96px;
+      }
+      textarea{
+        padding:0;
       }
       &.Mui-focused {
         border: 1px solid #485666;

@@ -31,7 +31,6 @@ const Index = (props) => {
     variant,
     size,
     status,
-    multiline,
     inputProps
   } = props;
   return (
@@ -51,8 +50,6 @@ const Index = (props) => {
         disabled={disabled}
         placeholder={placeholder}
         type={type}
-        multiline={multiline}
-        as={as}
       />
       {/* <Form.Group className="position-relative input-wrapper">
         {label && <Form.Label>{label}</Form.Label>}
