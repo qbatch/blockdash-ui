@@ -19,7 +19,7 @@ const OwnedNft = () => {
             </Box>
             <Grid container spacing={3}>
                 {[1, 2, 3,4,5,6,7,8,9,10,11,12,13,14,15,16].map((value) => (
-                    <Grid item md={3}>
+                    <Grid key={value} item md={3}>
                         <Nft
                             nftimage={NftImage} 
                             name="NFT Name"

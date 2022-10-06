@@ -52,7 +52,7 @@ const DashboardWrapper = styled.div`
     margin-top: 32px;
   }
   .border-gradient {
-    position:relative;
+    position: relative;
     &:before {
       content: "";
       background: linear-gradient(
@@ -100,6 +100,7 @@ const PageHeader = styled.div`
     margin-bottom: 0;
     span {
       color: #1976d2;
+      margin-left: 4px;
     }
     .back-arrow {
       margin-right: 30px;
@@ -117,6 +118,15 @@ const PageHeader = styled.div`
     &.page-title-secondary {
       line-height: 24px;
     }
+  }
+  p {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: ${({theme})=> theme.colors.bodyText};
+    margin-top: 12px;
+    margin-bottom: 0;
   }
   .page-header-extras {
     button {

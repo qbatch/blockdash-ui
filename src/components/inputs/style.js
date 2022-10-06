@@ -111,6 +111,7 @@ const InputWrapper = styled.div`
       color: #485666;
       padding-left: 2px;
       padding-right: 4px;
+ 
       transform: translate(14px, 8px) scale(1);
       &.Mui-focused {
         /* color: ${({ theme }) => theme.colors.labelColor}; */
@@ -122,9 +123,9 @@ const InputWrapper = styled.div`
       }
     }
     .MuiInputBase-root {
+      border: 1px solid #485666;
       input {
         /* border: 1px solid ${({ theme }) => theme.colors.secondaryVariant}; */
-        border: 1px solid #485666;
         font-weight: 300;
         line-height: 24px;
         border-radius: 8px;
@@ -148,11 +149,13 @@ const InputWrapper = styled.div`
         }
       }
       &.Mui-focused {
+        border: 1px solid #485666;
         .MuiOutlinedInput-notchedOutline {
           border-color: #485666;
         }
       }
       &:hover {
+        border: 1px solid #485666;
         .MuiOutlinedInput-notchedOutline {
           border-color: #485666;
         }

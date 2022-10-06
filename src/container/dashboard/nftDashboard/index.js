@@ -1,26 +1,13 @@
 import { Grid } from "@mui/material";
-import { Container } from "@mui/system";
+import { Container, Box } from "@mui/system";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Button from "../../../components/button/button";
-import IconBlock from "../../../static/images/icon-block.svg";
-import BitCoin from "../../../static/images/bitcoin.svg";
-import BitCoinIcon from "../../../static/images/bitcoin-icon.svg";
-import MetaMask from "../../../static/images/metamask.svg";
-import CoinBaseWallet from "../../../static/images/coinbasewallet.svg";
-import CoinBase from "../../../static/images/coinbase.svg";
-import Eth from "../../../static/images/eth.svg";
-import WalletImg from "../../../static/images/wallet.svg";
 import ChartImage from "../../../static/images/chart1.svg";
 import ChartImage1 from "../../../static/images/chart1small.svg";
 import ChartImage2 from "../../../static/images/chart2.svg";
 import Legend1 from "../../../static/images/legend1.svg";
 import Legend2 from "../../../static/images/legend2.svg";
 import TimeChart from "../../../static/images/small-chart.svg";
-import LargeChart from "../../../static/images/chart-large.svg";
-import PieChart1 from "../../../static/images/pie-chart1.svg";
-import PieChart2 from "../../../static/images/pie-chart2.svg";
-import Select from "../../../components/select/index";
 import AgGrid from "../../../components/ag-grid-table/index";
 import Pagination from "../../../components/pagination/index";
 import NftImage from "../../../static/images/nft-image.png";
@@ -403,18 +390,20 @@ const Index = () => {
   return (
     <>
       <DashboardWrapper>
-        <PageHeader className="d-flex justify-content-between align-items-center">
-          <h1 className="page-title">NFT Dashboard</h1>
-          <div className="page-header-extras">
-            <ul>
-              <li>
-                <Button variant="outlined">Refer A Friend</Button>
-              </li>
-              <li>
-                <Button variant="contained">Add Wallet</Button>
-              </li>
-            </ul>
-          </div>
+        <PageHeader>
+          <Box display={'flex'} alignItems="center" justifyContent={'space-between'}>
+            <h1 className="page-title">NFT Dashboard</h1>
+            <div className="page-header-extras">
+              <ul>
+                <li>
+                  <Button variant="outlined">Refer A Friend</Button>
+                </li>
+                <li>
+                  <Button variant="contained">Add Wallet</Button>
+                </li>
+              </ul>
+            </div>
+          </Box>
         </PageHeader>
         <div className="dashboard-content">
           <Container maxWidth={"100%"}>
@@ -484,7 +473,7 @@ const Index = () => {
               </Grid>
             </Grid>
             <NftDashboardWrapper>
-              <Tabs defaultActiveKey={tabs[0].key} tabs={tabs} />
+              <Tabs className="sorting-tabs" defaultActiveKey={tabs[0].key} tabs={tabs} />
             </NftDashboardWrapper>
           </Container>
         </div>
