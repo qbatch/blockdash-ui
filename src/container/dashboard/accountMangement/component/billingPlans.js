@@ -222,9 +222,9 @@ const BillingPlans = () => {
                                     user_referrals={user_referrals}
                                     headerHeight={36}
                                     rowHeight={56}
-                                    background="#030715"
+                                    background={({ theme }) => theme.colors.background}
                                 />
-                                <Pagination background="#030715" />
+                                <Pagination  background={({ theme }) => theme.colors.background} />
                             </div>
                         </Box>
                     </Box>

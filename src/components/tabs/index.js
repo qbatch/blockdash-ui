@@ -1,40 +1,34 @@
-import React from "react";
-import Tab from "react-bootstrap/Tab";
-import { StyledTabs } from "./style";
-const Tabs = (props) => {
-  const { tabs, defaultActiveKey, className } = props;
-  return (
-    <StyledTabs defaultActiveKey={defaultActiveKey} className={`mb-3 ${className}`}>
-      {tabs?.map((tab, key) => {
-        return (
-          <Tab key={key} eventKey={tab.key} title={tab.title}>
-            {tab.component}
-          </Tab>
-        );
-      })}
+import * as React from 'react';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import  {StyledTabs} from "./style"
 
-      {/* <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs
-          value={value}   
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+export default function BasicTabs(props) {
+  const {tabs,handleChange,value}=props;
+
+
+  return (
+    <StyledTabs>
+    <Box sx={{ width: '100%' }}>
+      <Box>
+        <Tabs value={value} onChange={handleChange}>
+          {tabs.map((tab,index)=>{
+            return(
+            <Tab key={index} iconPosition="start"  icon={tab.icon} label={tab.label} {...a11yProps(tab.index)} />
+            )
+          })}
+
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel> */}
+    </Box>
     </StyledTabs>
   );
-};
-
-export default Tabs;
+}
