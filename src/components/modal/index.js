@@ -1,7 +1,7 @@
 import React from "react";
 import { ModalWrapper } from "./style";
 // import { Modal } from "react-bootstrap";
-import {Box} from "@mui/material";
+import { Box } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
@@ -31,16 +31,15 @@ const Index = (props) => {
     saveText,
     size,
     closeButton,
+    btnSaveVariant,
+    btnCloseVariant,
+    btnDirection
   } = props;
 
   return (
-    <ModalWrapper
-      open={open}
-      onClose={onClose}
-      className={className}
-    >
+    <ModalWrapper open={open} onClose={onClose} className={className}>
       {header && (
-        <DialogTitle sx={{ m: 0, p: 2 }} {...props}>
+        <DialogTitle sx={{ m: 0, p: 2 }}>
           {header}
           {/* {onClose ? (
             <IconButton
@@ -62,12 +61,23 @@ const Index = (props) => {
         <Box>{props.children}</Box>
       </DialogContent>
       <DialogActions>
-        <Button autoFocus onClick={onSave}>
-          {saveText}
-        </Button>
-        <Button autoFocus onClick={onClose}>
-          {closeText}
-        </Button>
+        <Grid container spacing={3} direction={btnDirection}>
+          <Grid item md={6} xs={12}>
+            <Button
+              className="w-100"
+              variant={btnCloseVariant ? btnCloseVariant : "text"} 
+              autoFocus
+              onClick={onClose}
+            >
+              {closeText}
+            </Button>
+          </Grid>
+          <Grid item md={6} xs={12}>
+            <Button className="w-100" variant={btnSaveVariant ? btnSaveVariant : "contained"}  autoFocus onClick={onSave}>
+              {saveText}
+            </Button>
+          </Grid>
+        </Grid>
       </DialogActions>
       {/* {header && (
         <Modal.Header closeButton={closeButton}>

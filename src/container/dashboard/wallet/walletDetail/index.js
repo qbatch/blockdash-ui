@@ -479,8 +479,7 @@ const Index = () => {
             open={popup}
             saveText="Yes"
             closeText="No"
-            onClose={() => setPopup(false)}
-            header="Hello World"
+            onClose={() => setPopup(false)} btnSaveVariant="text" btnCloseVariant="outlined" btnDirection="row-reverse"
           >
             <i className="icon-error"></i>
             <h3>Are you sure you want to withdraw!</h3>
