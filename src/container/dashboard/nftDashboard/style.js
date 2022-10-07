@@ -11,7 +11,7 @@ const NftDashboardWrapper = styled.div`
       padding-right: 0;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
-      background: #151a26;
+      background: ${({ theme }) => theme.colors.surface};
       border-radius: 8px;
       border-bottom: 0px;
       gap:0;
@@ -21,11 +21,11 @@ const NftDashboardWrapper = styled.div`
           border: 0px;
           border-radius: 8px;
           font-size: 16px;
-          background: #151a26;
+          background: ${({ theme }) => theme.colors.surface};
           &:hover,
           &.active {
             background: linear-gradient(90deg, #1976d2 0%, #009470 100%);
-            color: #eff2f3;
+            color: ${({ theme }) => theme.colors.onPrimary};
           }
         }
         &:first-of-type {
@@ -51,7 +51,7 @@ const NftDashboardWrapper = styled.div`
       font-size: 24px;
       line-height: 28px;
       letter-spacing: 0.02em;
-      color: #1976d2;
+      color: ${({ theme }) => theme.colors.primaryColor};
     }
     padding-right: 100px;
   }
@@ -64,7 +64,7 @@ const NftDashboardWrapper = styled.div`
     display: flex;
     gap: 13px;
     ul {
-      background: #151a26;
+      background: ${({ theme }) => theme.colors.surface};
       border-radius: 8px;
       li {
         padding: 11px 20px;
@@ -81,7 +81,7 @@ const NftDashboardWrapper = styled.div`
         &:hover,
         &.active {
           background: linear-gradient(90deg, #1976d2 0%, #009470 100%);
-          color: #eff2f3;
+          color:${({ theme }) => theme.colors.onPrimary};
         }
       }
       &.sorting-filters {
@@ -99,7 +99,7 @@ const NftDashboardWrapper = styled.div`
     }
   }
   .nft-details-table {
-    background: #151a26;
+    background: ${({ theme }) => theme.colors.surface};
     border-radius: 8px;
     padding-left: 24px;
     padding-right: 24px;

@@ -1,11 +1,10 @@
 import styled from "styled-components";
-// import { Modal } from "react-bootstrap";
 import { Dialog } from "@mui/material";
 const ModalWrapper = styled(Dialog)`
   .MuiDialog-paper {
-    background-color: #151a26;
+    background-color: ${({ theme }) => theme.colors.surface};
     .MuiFormControl-root .MuiFormLabel-root.MuiInputLabel-shrink {
-      background-color: #151a26;
+      background-color: ${({ theme }) => theme.colors.surface};
     }
   }
   .MuiDialogTitle-root,
@@ -22,22 +21,20 @@ const ModalWrapper = styled(Dialog)`
       top:32px;
       svg{
         margin-bottom:0;
-        color:#019371;
+        color:${({ theme }) => theme.colors.secondaryColor};
       }
     }
     .MuiBox-root {
       max-width: 296px;
       margin: 0 auto;
     }
-    svg {
-      margin-bottom: 48px;
-    }
+ 
     h2 {
       font-weight: 800;
       font-size: 24px;
       line-height: 28px;
       letter-spacing: 0.02em;
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
       margin-bottom: 24px;
     }
     p {
@@ -50,7 +47,7 @@ const ModalWrapper = styled(Dialog)`
 
       /* H1 Color */
 
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
     }
   }
   .MuiDialog-root {
@@ -62,7 +59,7 @@ const ModalWrapper = styled(Dialog)`
     font-weight: 800;
     line-height: 28px;
     letter-spacing: 0.02em;
-    color: #eff2f3;
+    color: ${({ theme }) => theme.colors.onPrimary};
     padding-bottom: 32px;
   }
   .MuiDialogActions-root {
@@ -74,6 +71,11 @@ const ModalWrapper = styled(Dialog)`
       max-width: 464px;
       width: 100%;
     }
+    .MuiDialogContent-root{
+      .MuiBox-root{
+        max-width:100%;
+      }
+    }
   }
   &.congratulation-modal {
     .MuiDialog-paper {
@@ -83,6 +85,9 @@ const ModalWrapper = styled(Dialog)`
     .MuiDialogContent-root {
       padding-top: 48px;
       padding-bottom: 8px;
+      svg {
+      margin-bottom: 48px;
+    }
     }
   }
   &.cancel-modal {
@@ -94,6 +99,9 @@ const ModalWrapper = styled(Dialog)`
       .icon-exclamation {
         margin-bottom: 20px;
       }
+      svg{
+        margin-bottom:28px;
+      }
       h3 {
         font-weight: 700;
         font-size: 16px;
@@ -101,7 +109,7 @@ const ModalWrapper = styled(Dialog)`
         text-align: center;
         letter-spacing: 0.04em;
         color: ${({ theme }) => theme.colors.onPrimary};
-        margin-bottom: 4px;
+        margin-bottom: 14px;
       }
       p {
         font-weight: 300;
@@ -121,9 +129,12 @@ const ModalWrapper = styled(Dialog)`
       }
     }
   }
-  .congratulation-modal {
-    svg {
-      margin-bottom: 48px;
+  &.success-modal{
+    .MuiDialogContent-root{
+      padding-bottom: 48px;
+      h3{
+        margin-bottom:38px;
+      }
     }
   }
 `;

@@ -17,7 +17,7 @@ const PaginationWrapper = styled.div`
 
   /* Label Text Color */
 
-  color: #707c94;
+  color: ${({ theme }) => theme.colors.labelColor};
   /* bottom: 0; */
   /* left: 80px; */
   .pagination-wrapper {
@@ -26,12 +26,12 @@ const PaginationWrapper = styled.div`
     padding-right: 0px;
     .pagination-items-wrapper {
       .pagination-item {
-        background: #151a26;
+        background: ${({ theme }) => theme.colors.surface};
         margin: auto 5px;
         padding: 0;
         border-radius: 2px;
         font-size: 13px;
-        color: #707c94;
+        color: ${({ theme }) => theme.colors.labelColor};
         width: 32px;
         height: 32px;
         cursor: pointer;
@@ -85,7 +85,7 @@ const PaginationWrapper = styled.div`
           &:focus,
           &:hover {
             border: none;
-            color: #ffffff;
+            color: ${({ theme }) => theme.colors.onPrimary};
             background:none;
             &:before{
                 display:none;
@@ -95,8 +95,8 @@ const PaginationWrapper = styled.div`
         &:focus,
         &:hover {
           /* border: 1px solid #2589ff; */
-          color: #eff2f3;
-          background-color: #030715;
+          color: ${({ theme }) => theme.colors.onPrimary};
+          background-color:${({ theme }) => theme.colors.background};
           &:before {
             visibility: visible;
             opacity: 1;
@@ -105,7 +105,7 @@ const PaginationWrapper = styled.div`
       }
     }
     .pagination-icon {
-      background: #151a26;
+      background:${({ theme }) => theme.colors.surface};
       cursor: pointer;
       border: none;
       width: 32px;
@@ -149,15 +149,15 @@ const PaginationWrapper = styled.div`
       &:focus,
       &:hover {
         /* border: 1px solid #2589ff; */
-        color: #019371;
-        background-color: #030715;
+        color: ${({ theme }) => theme.colors.secondaryColor};
+        background-color: ${({ theme }) => theme.colors.background};
         &:before {
           visibility: visible;
           opacity: 1;
         }
       }
       svg {
-        color: #019371;
+        color: ${({ theme }) => theme.colors.secondaryColor};
         font-size: 10px;
       }
     }
@@ -203,7 +203,7 @@ const PaginationWrapper = styled.div`
     }
   }
   .counter-label {
-    color: #515d70;
+    color: ${({ theme }) => theme.colors.labelColor};
     width: 40px;
     display: block;
   }
@@ -211,7 +211,7 @@ const PaginationWrapper = styled.div`
     .select2-container
     .select2-selection__control
     .select2-selection__placeholder {
-    color: #515d70;
+    color: ${({ theme }) => theme.colors.labelColor};
   }
   select.drop-down-select.form-select {
     background: transparent;
@@ -258,7 +258,7 @@ const PaginationWrapper = styled.div`
         padding: 5px 12px;
         height: 22px;
         border: none;
-        background-color: #030715;
+        background-color: ${({ theme }) => theme.colors.background};
         border-radius: 2px;
         /* padding: 6px 11px; */
         &:focus {
@@ -295,12 +295,11 @@ const PaginationWrapper = styled.div`
       .MuiSelect-select {
         /* border:0px; */
         /* padding:0; */
-        color: #9ea5b4;
+        color: ${({ theme }) => theme.colors.labelColor};
         font-weight: 700;
         font-size: 13px;
         line-height: 16px;
         letter-spacing: 0.02em;
-        color: #707c94;
         text-align: right;
         padding-top: 0;
         padding-bottom: 0;
@@ -315,7 +314,7 @@ const PaginationWrapper = styled.div`
       }
       .MuiOutlinedInput-notchedOutline {
         border: transparent;
-        color: #9ea5b4;
+        color: ${({ theme }) => theme.colors.labelColor};
       }
     }
   }

@@ -14,7 +14,7 @@ const FaqWrapper = styled.div`
       font-size: 32px;
       line-height: 42px;
       letter-spacing: 0.02em;
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
       margin-bottom: 0;
     }
   }
@@ -28,7 +28,7 @@ const StaticWrapper = styled.div`
     font-size: 32px;
     line-height: 42px;
     letter-spacing: 0.02em;
-    color: #eff2f3;
+    color: ${({ theme }) => theme.colors.onPrimary};
     margin-bottom: 40px;
   }
   h3 {
@@ -36,7 +36,7 @@ const StaticWrapper = styled.div`
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.04em;
-    color: #eff2f3;
+    color: ${({ theme }) => theme.colors.onPrimary};
     margin-bottom: 16px;
   }
   p,
@@ -45,7 +45,7 @@ const StaticWrapper = styled.div`
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 0.02em;
-    color: #bfcbd1;
+    color: ${({ theme }) => theme.colors.bodyText};
     margin-bottom: 32px;
   }
   ul {
@@ -84,7 +84,7 @@ const RoadMap = styled.div`
         }
       }
       .MuiTimelineContent-root {
-        background: #151a26;
+        background:${({ theme }) => theme.colors.surface};
         box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.05);
         backdrop-filter: blur(13.5914px);
         border-radius: 12px;
@@ -99,7 +99,7 @@ const RoadMap = styled.div`
 
           /* H1 Color */
 
-          color: #eff2f3;
+          color: ${({ theme }) => theme.colors.onPrimary};
           margin-bottom: 8px;
         }
         span {
@@ -112,7 +112,7 @@ const RoadMap = styled.div`
 
           /* H1 Color */
 
-          color: #eff2f3;
+          color: ${({ theme }) => theme.colors.onPrimary};
           display: block;
         }
         p {
@@ -125,7 +125,7 @@ const RoadMap = styled.div`
 
           /* Color Primary Text */
 
-          color: #bfcbd1;
+          color: ${({ theme }) => theme.colors.bodyText};
           margin-top: 16px;
         }
       }

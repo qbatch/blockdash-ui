@@ -40,7 +40,7 @@ const StateBox = styled.div`
       gap: 15px;
       /* margin-bottom: 16px; */
       i {
-        color: #1976d2;
+        color: ${({ theme }) => theme.colors.primaryColor};
         font-size: 20px;
       }
     }
@@ -103,7 +103,7 @@ const StateBox = styled.div`
             /* identical to box height, or 123% */
             vertical-align: middle;
             letter-spacing: 0.02em;
-            color: #ffffff;
+            color: ${({ theme }) => theme.colors.onPrimary};
             margin-right: 12px;
             &:last-of-type {
               margin-right: 0;
@@ -136,7 +136,7 @@ const StateBox = styled.div`
             font-size: 24px;
             line-height: 28px;
             letter-spacing: 0.02em;
-            color: #bfcbd1;
+            color: ${({ theme }) => theme.colors.bodyText};
             margin-bottom: 32px;
             &:last-of-type {
               margin-bottom: 0;
@@ -146,14 +146,14 @@ const StateBox = styled.div`
       }
     }
     .stat-icon {
-      background: #030715;
+      background:${({ theme }) => theme.colors.background};
       border-radius: 8px;
       width: 110px;
       margin-right: 24px;
       height: 152px;
-      &.no-bg{{
+      &.no-bg{
         background:transparent;
-      }}
+      }
     }
   }
 
@@ -174,7 +174,7 @@ const AssetBox = styled.div`
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.04em;
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
       margin-bottom: 0;
       max-width: 290px;
       span {
@@ -182,19 +182,19 @@ const AssetBox = styled.div`
         font-size: 13px;
         line-height: 18px;
         letter-spacing: 0.02em;
-        color: #bfcbd1;
+        color: ${({ theme }) => theme.colors.bodyText};
       }
     }
     ul {
       display: flex;
       gap: 8px;
       li {
-        background: #030715;
+        background: ${({ theme }) => theme.colors.background};
         font-weight: 500;
         font-size: 11px;
         line-height: 14px;
         letter-spacing: 0.02em;
-        color: #bfcbd1;
+        color: ${({ theme }) => theme.colors.bodyText};
         border-radius: 4px;
         padding: 3px 6px;
         cursor: pointer;
@@ -226,7 +226,7 @@ const AssetBox = styled.div`
       line-height: 42px;
       text-align: center;
       letter-spacing: 0.02em;
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
       margin-bottom: 0;
     }
   }

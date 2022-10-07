@@ -4,7 +4,7 @@ const SubscriptionCardWrapper = styled.div`
   padding: 24px;
   border-radius: 8px;
   margin-bottom: 24px;
-  background: #151a26;
+  background: ${({ theme }) => theme.colors.surface};
   border-radius: 8px;
   position: relative;
   &:before {

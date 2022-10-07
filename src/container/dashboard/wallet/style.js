@@ -15,8 +15,10 @@ const WalletCard = styled.div`
       font-size: 24px;
       line-height: 28px;
       letter-spacing: 0.02em;
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
       margin-bottom: 0;
+      display:flex;
+      align-items:center;
       img {
         margin-right: 16px;
         /* width: 40px; */
@@ -33,13 +35,13 @@ const WalletCard = styled.div`
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.04em;
-        color: #eff2f3;
+        color: ${({ theme }) => theme.colors.onPrimary};
         small {
           font-weight: 500;
           font-size: 11px;
           line-height: 14px;
           letter-spacing: 0.02em;
-          color: #9ea5b4;
+          color: ${({ theme }) => theme.colors.labelColor};
           display: block;
         }
       }
@@ -49,14 +51,14 @@ const WalletCard = styled.div`
       font-size: 11px;
       line-height: 14px;
       letter-spacing: 0.02em;
-      color: #9ea5b4;
+      color: ${({ theme }) => theme.colors.labelColor};
       margin-bottom: 0;
       display: flex;
       align-items: center;
       gap: 15px;
       margin-bottom: 16px;
       i {
-        color: #1976d2;
+        color: ${({ theme }) => theme.colors.primaryColor};
         font-size: 20px;
       }
     }
@@ -75,7 +77,7 @@ const WalletCard = styled.div`
 
         /* Color Primary Text */
 
-        color: #019371;
+        color: ${({ theme }) => theme.colors.secondaryColor};
         i {
           font-size: 8px;
           &.icon-dots {
@@ -97,7 +99,7 @@ const WalletCard = styled.div`
 
         /* Small title */
         margin-bottom: 4px;
-        color: #9ea5b4;
+        color: ${({ theme }) => theme.colors.labelColor};
         span {
           font-weight: 700;
           font-size: 13px;
@@ -108,7 +110,7 @@ const WalletCard = styled.div`
 
           /* H1 Color */
 
-          color: #eff2f3;
+          color:${({ theme }) => theme.colors.onPrimary};
           margin-left: 8px;
         }
       }
@@ -122,7 +124,7 @@ const WalletCard = styled.div`
 
         /* Color Primary Text */
 
-        color: #bfcbd1;
+        color:${({ theme }) => theme.colors.bodyText};
       }
       .wallet-info-box {
       }
@@ -132,7 +134,7 @@ const WalletCard = styled.div`
       font-size: 24px;
       line-height: 28px;
       letter-spacing: 0.02em;
-      color: #bfcbd1;
+      color: ${({ theme }) => theme.colors.bodyText};
       margin-bottom: 0;
     }
     .stat-content-right {
@@ -166,7 +168,7 @@ const WalletCard = styled.div`
 
       /* Color Primary Text */
 
-      color: #bfcbd1;
+      color: ${({ theme }) => theme.colors.bodyText};
       margin-bottom: 0;
       i {
         font-size: 16px;
@@ -179,7 +181,7 @@ const WalletCard = styled.div`
       width: 113px;
       margin: 0 auto;
       margin-right: 0;
-      background-color:#151A26;
+      background-color:${({ theme }) => theme.colors.surface};
     }
   }
   .stat-content-inner {
@@ -197,7 +199,7 @@ const WalletCard = styled.div`
           margin-bottom: 2px;
           letter-spacing: 0.02em;
 
-          color: #9ea5b4;
+          color: ${({ theme }) => theme.colors.labelColor};
         }
         p {
           font-weight: 700;
@@ -208,7 +210,7 @@ const WalletCard = styled.div`
 
           letter-spacing: 0.02em;
 
-          color: #ffffff;
+          color: ${({ theme }) => theme.colors.onPrimary};
         }
         ul {
           li {
@@ -218,7 +220,7 @@ const WalletCard = styled.div`
             /* identical to box height, or 123% */
             vertical-align: middle;
             letter-spacing: 0.02em;
-            color: #ffffff;
+            color: ${({ theme }) => theme.colors.onPrimary};
             margin-right: 12px;
             &:last-of-type {
               margin-right: 0;
@@ -251,7 +253,7 @@ const WalletCard = styled.div`
             font-size: 24px;
             line-height: 28px;
             letter-spacing: 0.02em;
-            color: #bfcbd1;
+            color:${({ theme }) => theme.colors.bodyText};
             margin-bottom: 32px;
             &:last-of-type {
               margin-bottom: 0;
@@ -261,7 +263,7 @@ const WalletCard = styled.div`
       }
     }
     .stat-icon {
-      background: #030715;
+      background: ${({ theme }) => theme.colors.background};
       border-radius: 8px;
       width: 110px;
       margin-right: 24px;

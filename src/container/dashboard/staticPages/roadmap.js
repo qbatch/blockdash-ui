@@ -99,7 +99,7 @@ export default function OutlinedTimeline() {
                 </TimelineContent>
               </TimelineItem>
             </Timeline>
-            {/* <ContactForm>
+            <ContactForm>
               <Box className="form-header">
                 <h3>Submit a Question</h3>
               </Box>
@@ -116,7 +116,7 @@ export default function OutlinedTimeline() {
                   Send
                 </Button>
               </Box>
-            </ContactForm> */}
+            </ContactForm>
           </RoadMap>
         </Grid>
       </Grid>

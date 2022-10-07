@@ -101,8 +101,8 @@ const GlobalStyles = createGlobalStyle`
         /* &.custom-dropdown{ */
             .MuiPaper-root{
                 padding:24px;
-                background-color:#030715;
-                color: #707C94;
+                background-color:${({ theme }) => theme.colors.background};
+                color:${({ theme }) => theme.colors.labelColor};
                 .MuiList-root{
                     padding:0;  
                     .MuiButtonBase-root{
@@ -113,14 +113,14 @@ const GlobalStyles = createGlobalStyle`
                         line-height: 18px;
                         letter-spacing: 0.02em;
                         &:hover{
-                            color:#019371;
+                            color:${({ theme }) => theme.colors.secondaryColor};
                         }
                         &:last-of-type{
                             margin-bottom:0;
                         }
                         &.Mui-selected {
                             background:none;
-                            color:#019371;
+                            color:${({ theme }) => theme.colors.secondaryColor};
                         }
                     }
                 }

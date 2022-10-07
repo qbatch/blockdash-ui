@@ -18,7 +18,7 @@ const AccordionWrapper = styled.div`
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.04em;
-      color: #bfcbd1;
+      color: ${({ theme }) => theme.colors.bodyText};
     }
   }
   .MuiAccordionDetails-root {
@@ -28,11 +28,11 @@ const AccordionWrapper = styled.div`
       font-size: 13px;
       line-height: 18px;
       letter-spacing: 0.02em;
-      color: #bfcbd1;
+      color: ${({ theme }) => theme.colors.bodyText};
     }
   }
   .MuiAccordionSummary-expandIconWrapper {
-    color: #019371;
+    color: ${({ theme }) => theme.colors.secondaryColor};
     font-size: 24px;
     position: relative;
     top: 4px;

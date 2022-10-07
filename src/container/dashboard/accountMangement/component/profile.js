@@ -10,8 +10,8 @@ const Profile = () => {
     const [deleteAccount,setDeleteAccount]=useState(false)
     return (
         <AccountMangementWrapper>
-            <Box display="flex" justifyContent="space-between" alignItems="center" >
-                <h1 className="heading">Profile</h1>
+            <Box className="heading" display="flex" justifyContent="space-between" alignItems="center" >
+                <h1>Profile</h1>
                 <Button variant="outlined" onClick={() => setProfileEdit(!profileEdit)}>{!profileEdit ? "Edit Profile" : "Save"}</Button>
             </Box>
             <Grid container className="user-info" columnSpacing={2}>
@@ -64,7 +64,7 @@ const Profile = () => {
                 </Grid>
             </Grid>
             <Divider className="profile-divder" />
-            <Box sx={{ marginTop: "34px" }} display="flex" justifyContent="space-between" alignItems="start">
+            <Box className="user-profile-footer" sx={{ marginTop: "34px" }} display="flex" justifyContent="space-between" alignItems="start">
                 <Box display="flex" flexDirection="column">
                     <h3>Delete your Account</h3>
                     <p>Cancel account will lose access to data</p>

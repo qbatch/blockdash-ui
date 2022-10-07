@@ -196,7 +196,7 @@ const Referral = () => {
                 </Box>
             </Box>
             <Modal
-                className="cancel-modal"
+                className="cancel-modal success-modal"
                 open={copyLink}
                 maxWidth="xs"
                 onClose={()=>setCopyLink(false)}
@@ -209,7 +209,7 @@ const Referral = () => {
                         <h3>Link Copied</h3>
                     </Box>
 
-                    <p>Send this link to your frieds and get a  <b>”Free Wallet”</b></p>
+                    <p>Send this link to your frieds and get a  <br/><strong>”Free Wallet”</strong></p>
                 </Box>
             </Modal>
         </AccountMangementWrapper>

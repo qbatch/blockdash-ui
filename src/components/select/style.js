@@ -100,7 +100,7 @@ const SelectWrapper = Styled.div`
       .MuiOutlinedInput-notchedOutline{
         
         border:transparent;
-        color: #9EA5B4;
+        color: ${({ theme }) => theme.colors.labelColor};
       }
     }
 &.chart-time-select{
@@ -110,7 +110,7 @@ const SelectWrapper = Styled.div`
       .MuiSelect-select{
         /* border:0px; */
         /* padding:0; */
-        color: #9EA5B4;
+        color: ${({ theme }) => theme.colors.labelColor};
         font-weight: 500;
         font-size: 11px;
         line-height: 14px;
@@ -129,7 +129,7 @@ const SelectWrapper = Styled.div`
       }
       .MuiOutlinedInput-notchedOutline{
         border:transparent;
-        color: #9EA5B4;
+        color: ${({ theme }) => theme.colors.labelColor};
       }
     }
   }

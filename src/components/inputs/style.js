@@ -64,7 +64,7 @@ const InputWrapper = styled.div`
         line-height: 12px;
         letter-spacing: 0.02em;
         margin-right: 3px;
-        color: #bfcbd1;
+        color: ${({ theme }) => theme.colors.bodyText};
       }
       .password-strength {
         & > div {
@@ -117,7 +117,7 @@ const InputWrapper = styled.div`
       }
       &.MuiInputLabel-shrink {
         transform: translate(14px, -8px) scale(0.75);
-        background-color: #030715;
+        background-color: ${({ theme }) => theme.colors.background};
         padding-left: 4px;
       }
     }
@@ -157,7 +157,7 @@ const InputWrapper = styled.div`
       .MuiInputBase-input {
         &:-webkit-autofill {
           border: 1px solid rgba(0, 0, 0, 0.23);
-          -webkit-text-fill-color: #BFCBD1;
+          -webkit-text-fill-color: ${({ theme }) => theme.colors.bodyText};
           /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
           transition: background-color 5000s ease-in-out 0s;
         }

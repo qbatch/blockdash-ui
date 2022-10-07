@@ -1,6 +1,6 @@
 import Styled from "styled-components";
 const NftWrapper = Styled.div`
-background: #151A26;
+background: ${({ theme }) => theme.colors.surface};
 border-radius: 8px;
         .nft-image{
             /* max-height:209px;
@@ -25,7 +25,7 @@ border-radius: 8px;
                 font-size: 13px;
                 line-height: 18px;
                 letter-spacing: 0.02em;
-                color: #BFCBD1;
+                color: ${({ theme }) => theme.colors.bodyText};
                 margin-bottom:12px;
             }
             .price{
@@ -34,7 +34,7 @@ border-radius: 8px;
                 line-height: 24px;
                 text-align: right;
                 letter-spacing: 0.04em;
-                color: #EFF2F3;
+                color: ${({ theme }) => theme.colors.onPrimary};
                 img{
                     margin-right:8px;
                 }

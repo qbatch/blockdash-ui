@@ -48,7 +48,7 @@ height:auto;
 			font-size: 13px;
 			line-height: 18px;
 			letter-spacing: 0.02em;
-			color: #707C94;
+			color: ${({ theme }) => theme.colors.labelColor};
 			display:block;
 			&:after{
 				content:'';
@@ -61,16 +61,16 @@ height:auto;
 			}
 			&:hover{
 				&:after{
-					background-color:#019371;
+					background-color:${({ theme }) => theme.colors.secondaryColor};
 				}
-				color:#019371;
+				color:${({ theme }) => theme.colors.secondaryColor};
 			}
 			}
 			&:hover{
 				a{
-				color:#019371;
+				color:${({ theme }) => theme.colors.secondaryColor};
 				&:after{
-					background-color:#019371;
+					background-color:${({ theme }) => theme.colors.secondaryColor};
 				}
 			}
 			}
@@ -106,7 +106,7 @@ height:auto;
 				a{
 					i{
 						font-size:16px;
-						color:${({theme})=> theme.colors.secondaryColor};
+						color:${({ theme }) => theme.colors.secondaryColor};
 						position:relative;
 						&.icon-bell{
 							&:after{
@@ -114,7 +114,7 @@ height:auto;
 								position:absolute;
 								width:5px;
 								height:5px;
-								background:${({theme})=> theme.colors.accentColorError};
+								background:${({ theme }) => theme.colors.accentColorError};
 								border-radius:55px;
 								right: 1px;
 							}
@@ -131,7 +131,7 @@ height:auto;
  }
 `;
 const FooterWrapper = Styled.div`
-background: #030715;
+background: ${({ theme }) => theme.colors.background};
 box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.05);
 backdrop-filter: blur(13.5914px);
 padding-left:35px;

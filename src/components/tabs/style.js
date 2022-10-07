@@ -48,7 +48,7 @@ const StyledTabs = styled.div`
     /* padding:16px 20px; */
     padding: 16px 21px;
     border-radius: 7px;
-    color: #bfcbd1;
+    color: ${({ theme }) => theme.colors.bodyText};
     text-transform: capitalize;
     font-size: 13px;
     font-weight: 700;
@@ -61,7 +61,7 @@ const StyledTabs = styled.div`
     &.Mui-selected {
       position: relative;
       border: 1px solid transparent;
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
       &:before {
         content: "";
         background: linear-gradient(

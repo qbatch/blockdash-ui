@@ -94,7 +94,7 @@ const PageHeader = styled.div`
     font-size: 32px;
     line-height: 42px;
     letter-spacing: 0.02em;
-    color: #eff2f3;
+    color: ${({ theme }) => theme.colors.onPrimary};
     display: flex;
     align-items: center;
     margin-bottom: 0;
@@ -194,7 +194,7 @@ const WalletSource = styled.div`
   }
 `;
 const ContactForm = styled.div`
-  background: #151a26;
+  background: ${({ theme }) => theme.colors.surface};
   box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(13.5914px);
   padding: 48px;
@@ -209,7 +209,7 @@ const ContactForm = styled.div`
       line-height: 28px;
       text-align: center;
       letter-spacing: 0.02em;
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
       margin-bottom:8px;
     }
     p {
@@ -217,7 +217,7 @@ const ContactForm = styled.div`
       font-size: 16px;
       line-height: 24px;
       text-align: center;
-      color: #bfcbd1;
+      color: ${({ theme }) => theme.colors.bodyText};
       margin-bottom:0;
     }
   }

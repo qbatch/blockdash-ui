@@ -9,7 +9,7 @@ const PaymentWrapper = styled.div`
       font-size: 24px;
       line-height: 28px;
       letter-spacing: 0.02em;
-      color: #eff2f3;
+      color: ${({ theme }) => theme.colors.onPrimary};
       margin-bottom: 24px;
     }
     .payment-method {

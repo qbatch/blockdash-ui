@@ -311,7 +311,7 @@ const Index = () => {
                   </div>
                   <div className="stat-content">
                     <div className="stat-content-inner d-flex align-items-center">
-                      <div className="stat-icon d-flex align-items-center justify-content-center">
+                      <div className="stat-icon no-bg d-flex align-items-center justify-content-center">
                         <img src={WalletImg} alt="icon" />
                       </div>
                       <div className="stat-details">
