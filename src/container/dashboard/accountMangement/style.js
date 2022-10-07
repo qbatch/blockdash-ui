@@ -64,8 +64,8 @@ const ContentWrapper = styled.div`
     margin-left: 9px;
     .content{
         margin:19px 24px 16px 40px ;
-        height:calc(100vh - 500px);
-        overflow:auto ;
+        /* height:calc(100vh - 500px); */
+        /* overflow:auto ; */
     }
 }
 `

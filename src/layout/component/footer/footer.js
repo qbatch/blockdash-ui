@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FooterWrapper } from "../style";
 const Footer = (props) => {
+  let navigate = useNavigate();
   const { onClick } = props;
   return (
     <FooterWrapper>
@@ -10,13 +12,13 @@ const Footer = (props) => {
         </div>
         <ul className="d-flex footer-menu">
           <li>
-            <a href="#">FAQ’s</a>
+            <a onClick={()=>  navigate("/faq")} href="javascript:;">FAQ’s</a>
           </li>
           <li>
-            <a href="#">Privacy Policy</a>
+            <a onClick={()=>  navigate("/privacy")} href="javascript:;">Privacy Policy</a>
           </li>
           <li>
-            <a href="#">Terms & Conditions</a>
+            <a onClick={()=>  navigate("/terms")} href="javascript:;">Terms & Conditions</a>
           </li>
         </ul>
       </div>

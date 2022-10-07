@@ -12,9 +12,10 @@ import Modal from "../../../../components/modal/index";
 
 import { DashboardWrapper, PageHeader, WalletSource } from "../../style";
 import { WalletCard } from "./../style";
-
+import { useNavigate } from "react-router-dom";
 const Index = () => {
   const [popup, setPopup] = useState(false);
+  let navigate = useNavigate();
   // const [open, setOpen] = React.useState(false);
 
   // const handleClickOpen = () => {
@@ -37,7 +38,7 @@ const Index = () => {
       <DashboardWrapper>
         <PageHeader className="d-flex justify-content-between align-items-center">
           <h1 className="page-title">
-            <i className="icon-arrow-left icon-left-arrow back-arrow"></i>
+            <i onClick={()=>  navigate("/wallet")} className="icon-arrow-left icon-left-arrow back-arrow"></i>
             <img className="title-img" src={AtomicWallet} alt="wallet-image" />
             Atomic Wallet
           </h1>
@@ -480,6 +481,7 @@ const Index = () => {
             saveText="Yes"
             closeText="No"
             onClose={() => setPopup(false)} btnSaveVariant="text" btnCloseVariant="outlined" btnDirection="row-reverse"
+            dialogActions
           >
             <i className="icon-error"></i>
             <h3>Are you sure you want to withdraw!</h3>

@@ -39,7 +39,8 @@ const StaticWrapper = styled.div`
     color: #eff2f3;
     margin-bottom: 16px;
   }
-  p,ul {
+  p,
+  ul {
     font-weight: 300;
     font-size: 13px;
     line-height: 18px;
@@ -47,11 +48,96 @@ const StaticWrapper = styled.div`
     color: #bfcbd1;
     margin-bottom: 32px;
   }
-  ul{
-    padding-left:15px;
-    li{
-      list-style:disc;
+  ul {
+    padding-left: 15px;
+    li {
+      list-style: disc;
     }
   }
 `;
-export { FaqWrapper, StaticWrapper };
+const RoadMap = styled.div`
+  padding-top: 48px;
+  padding-bottom: 52px;
+  h1 {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .form-header{
+    margin-bottom:24px;
+    h3{
+      margin-bottom: 0;
+    }
+  }
+  .MuiTimeline-root {
+    .MuiTimelineItem-root {
+      .MuiTimelineSeparator-root {
+        margin-left:24px;
+        margin-right: 24px;
+        .MuiTimelineDot-root {
+          margin: 0;
+          width: 22px;
+          height: 22px;
+        }
+        .MuiTimelineConnector-root {
+          background-color: #485666;
+          width: 1px;
+        }
+      }
+      .MuiTimelineContent-root {
+        background: #151a26;
+        box-shadow: 0px 20px 27px rgba(0, 0, 0, 0.05);
+        backdrop-filter: blur(13.5914px);
+        border-radius: 12px;
+        padding: 24px;
+        h3 {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          /* identical to box height, or 150% */
+
+          letter-spacing: 0.04em;
+
+          /* H1 Color */
+
+          color: #eff2f3;
+          margin-bottom: 8px;
+        }
+        span {
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 18px;
+          /* identical to box height, or 138% */
+
+          letter-spacing: 0.02em;
+
+          /* H1 Color */
+
+          color: #eff2f3;
+          display: block;
+        }
+        p {
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 18px;
+          /* or 138% */
+
+          letter-spacing: 0.02em;
+
+          /* Color Primary Text */
+
+          color: #bfcbd1;
+          margin-top: 16px;
+        }
+      }
+      &:nth-of-type(even) {
+        .MuiTimelineContent-root {
+          text-align: left;
+        }
+      }
+      &:before {
+        padding: 24px;
+      }
+    }
+  }
+`;
+export { FaqWrapper, StaticWrapper, RoadMap };

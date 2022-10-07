@@ -22,7 +22,9 @@ import Tabs from "../../../components/tabs";
 import { DashboardWrapper, PageHeader, WalletSource } from "../style";
 import { StateBox } from "../statistics/style";
 import { NftDashboardWrapper } from "./style";
+import { useNavigate } from "react-router-dom";
 const Index = () => {
+  let navigate = useNavigate();
   const options = [
     { title: "1h", value: 1 },
     { title: "2h", value: 2 },
@@ -405,16 +407,6 @@ const Index = () => {
             justifyContent={"space-between"}
           >
             <h1 className="page-title">NFT Dashboard</h1>
-            <div className="page-header-extras">
-              <ul>
-                <li>
-                  <Button variant="outlined">Refer A Friend</Button>
-                </li>
-                <li>
-                  <Button variant="contained">Add Wallet</Button>
-                </li>
-              </ul>
-            </div>
           </Box>
         </PageHeader>
         <div className="dashboard-content">

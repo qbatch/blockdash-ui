@@ -34,53 +34,61 @@ const Index = (props) => {
     btnSaveVariant,
     btnCloseVariant,
     btnDirection,
-    dialogActions
+    dialogActions,
   } = props;
 
   return (
-    <ModalWrapper open={open} onClose={onClose} className={className} maxWidth={maxWidth}>
-      {header && (
-        <DialogTitle sx={{ m: 0, p: 2 }}>
-          {header}
-        </DialogTitle>
-      )}
+    <ModalWrapper
+      open={open}
+      onClose={onClose}
+      className={className}
+      maxWidth={maxWidth}
+    >
+      {header && <DialogTitle sx={{ m: 0, p: 2 }}>{header}</DialogTitle>}
       <DialogContent dividers>
-      {onClose && 
-            <IconButton
-              aria-label="close"
-              onClick={onClose}
-              sx={{
-                position:"absolute",
-                right:0,
-                top:0,
-                color:"#1976D2"
-
-              }}
-            >
-              <CloseIcon />
-            </IconButton>}
+        {closeButton && (
+          <IconButton
+            aria-label="close"
+            onClick={onClose}
+            sx={{
+              position: "absolute",
+              right: 0,
+              top: 0,
+              color: "#1976D2",
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        )}
         <Box>{props.children}</Box>
       </DialogContent>
-      {dialogActions &&      <DialogActions>
-        <Grid container spacing={3} direction={btnDirection}>
-          <Grid item md={6} xs={12}>
-            <Button
-              className="w-100"
-              variant={btnCloseVariant ? btnCloseVariant : "text"} 
-              autoFocus
-              onClick={onClose}
-            >
-              {closeText}
-            </Button>
+      {dialogActions && (
+        <DialogActions>
+          <Grid container spacing={3} direction={btnDirection}>
+            <Grid item md={6} xs={12}>
+              <Button
+                className="w-100"
+                variant={btnCloseVariant ? btnCloseVariant : "text"}
+                autoFocus
+                onClick={onClose}
+              >
+                {closeText}
+              </Button>
+            </Grid>
+            <Grid item md={6} xs={12}>
+              <Button
+                className="w-100"
+                variant={btnSaveVariant ? btnSaveVariant : "contained"}
+                autoFocus
+                onClick={onSave}
+              >
+                {saveText}
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item md={6} xs={12}>
-            <Button className="w-100" variant={btnSaveVariant ? btnSaveVariant : "contained"}  autoFocus onClick={onSave}>
-              {saveText}
-            </Button>
-          </Grid>
-        </Grid>
-      </DialogActions>}
-  
+        </DialogActions>
+      )}
+
       {/* {header && (
         <Modal.Header closeButton={closeButton}>
           <Modal.Title>{header}</Modal.Title>

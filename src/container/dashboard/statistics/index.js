@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
-import { Container } from "@mui/system";
+import { Container, Box } from "@mui/system";
 import React, { useState } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Button from "../../../components/button/button";
 import IconBlock from "../../../static/images/icon-block.svg";
 import BitCoin from "../../../static/images/bitcoin.svg";
@@ -18,10 +18,11 @@ import PieChart2 from "../../../static/images/pie-chart2.svg";
 import Select from "../../../components/select/index";
 import AgGrid from "../../../components/ag-grid-table/index";
 import Pagination from "../../../components/pagination/index";
+import { useNavigate } from "react-router-dom";
 import { DashboardWrapper, PageHeader, WalletSource } from "../style";
 import { StateBox, AssetBox } from "./style";
-import Badge from "../../../components/badge/index";
 const Index = () => {
+  let navigate = useNavigate();
   const options = [
     { title: "1h", value: 1 },
     { title: "2h", value: 2 },
@@ -137,10 +138,10 @@ const Index = () => {
       field: "AssetOwned",
       cellRendererFramework: () => {
         return (
-          <div className="d-flex title-image align-items-center">
+          <Box display={"flex"} alignItems="center" className="title-image">
             <img width={"20px"} src={BitCoinIcon} alt="asset image" />
             Bitcoin
-          </div>
+          </Box>
         );
       },
     },
@@ -152,7 +153,7 @@ const Index = () => {
       cellRendererFramework: () => {
         return (
           <WalletSource>
-            <ul className="wallet-sources d-flex">
+            <ul className="wallet-sources">
               <li>
                 {" "}
                 <img src={MetaMask} />3
@@ -207,14 +208,18 @@ const Index = () => {
       field: "shipped",
       cellRendererFramework: () => {
         return (
-          <div className="table-time-chart d-flex align-items-center">
+          <Box
+            display={"flex"}
+            alignItems="center"
+            className="table-time-chart"
+          >
             <p className="text-success text-percentage">
               12% <i className="icon-arrow-up"></i>
             </p>
             <div className="time-chart">
               <img src={TimeChart} width={"81px"} alt="chart img" />
             </div>
-          </div>
+          </Box>
         );
       },
     },
@@ -227,20 +232,32 @@ const Index = () => {
   return (
     <>
       <DashboardWrapper>
-        <PageHeader className="d-flex justify-content-between align-items-center">
-          <h1 className="page-title">
-            Good Morning <span>Name Here</span>
-          </h1>
-          <div className="page-header-extras">
-            <ul>
-              <li>
-                <Button variant="outlined">Refer A Friend</Button>
-              </li>
-              <li>
-                <Button variant="contained">Add Wallet</Button>
-              </li>
-            </ul>
-          </div>
+        <PageHeader>
+          <Box display={'flex'} justifyContent="space-between" alignItems="center">
+            <h1 className="page-title">
+              Good Morning <span>Name Here</span>
+            </h1>
+            <div className="page-header-extras">
+              <ul>
+                <li>
+                  <Button
+                    onClick={() => navigate("/account-management")}
+                    variant="outlined"
+                  >
+                    Refer A Friend
+                  </Button>
+                </li>
+                <li>
+                  <Button
+                    onClick={() => navigate("/wallet")}
+                    variant="contained"
+                  >
+                    Add Wallet
+                  </Button>
+                </li>
+              </ul>
+            </div>
+          </Box>
         </PageHeader>
         <div className="dashboard-content">
           <Container maxWidth={"100%"}>
@@ -257,7 +274,7 @@ const Index = () => {
                   </div>
                 </StateBox>
                 <StateBox>
-                  <div className="d-flex stat-header align-items-center justify-content-between">
+                  <Box display={'flex'} alignItems="center" justifyContent={'space-between'} className="stat-header">
                     <div className="stat-header-left">
                       <h4>
                         <i className="icon-box-secondary"></i> Total Assets
@@ -271,8 +288,8 @@ const Index = () => {
                         menuItem={options}
                       />
                     </div>
-                  </div>
-                  <div className="stat-content d-flex align-items-center justify-content-between">
+                  </Box>
+                  <Box display={'flex'} alignItems="center" justifyContent={'space-between'} className="stat-content">
                     <div className="stat-content-left">
                       <p className="text-success">$14,287</p>
                     </div>
@@ -281,14 +298,10 @@ const Index = () => {
                         <i className="icon-arrow-up"></i>2%
                       </p>
                       <div className="time-chart">
-                        <img
-                          src={TimeChart}
-                          width={"48px"}
-                          alt="chart img"
-                        />
+                        <img src={TimeChart} width={"48px"} alt="chart img" />
                       </div>
                     </div>
-                  </div>
+                  </Box>
                 </StateBox>
               </Grid>
               <Grid item md={3} xs={12}>

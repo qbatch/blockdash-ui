@@ -5,7 +5,6 @@ import Select from "../../../components/select/index";
 import Input from "../../../components/inputs/input/index";
 import PasswordInput from "../../../components/inputs/passwordInput/index";
 import PhoneInput from "../../../components/inputs/phoneInput/index";
-import CheckBox from "../../../components/checkbox/index";
 import MetaMask from "../../../static/images/metamask.svg";
 import CoinBaseWallet from "../../../static/images/coinbasewallet.svg";
 import CoinBase from "../../../static/images/coinbase.svg";

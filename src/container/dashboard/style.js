@@ -176,56 +176,11 @@ const PageHeader = styled.div`
     }
   }
 `;
-const TableHeader = styled.div`
-  margin-bottom: 16px;
-  &.table-header-secondary {
-    margin-bottom: 23px;
-  }
-  .table-title {
-    line-height: 20px;
-    margin-bottom: 0;
-  }
-  .table-title-single {
-    margin-bottom: 6px;
-    padding-top: 4px;
-  }
-  .table-header-extras {
-    input,
-    select {
-      display: inline-block;
-    }
-    .field-wrapper {
-      display: inline-block;
-      margin-left: 12px;
-      margin-bottom: 0;
-      .select2-container {
-        margin-bottom: 0;
-      }
-    }
-    .field-btn {
-      width: auto;
-      margin-bottom: 0;
-      margin-left: 12px;
-      i {
-        margin-right: 8px;
-        font-size: 14px;
-        position: relative;
-        top: 1px;
-      }
-    }
-    ul {
-      li {
-        button {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
-`;
 const WalletSource = styled.div`
   .wallet-sources {
     list-style: none;
     align-items: center;
+    display: flex;
     li {
       margin-right: 16px;
       img {
@@ -269,9 +224,12 @@ const ContactForm = styled.div`
   .form-content {
     max-width: 368px;
     margin: 0 auto;
+    button{
+      margin-top:8px;
+    }
   }
 `;
 
 // extras not used
 
-export { DashboardWrapper, PageHeader, TableHeader, WalletSource, ContactForm };
+export { DashboardWrapper, PageHeader, WalletSource, ContactForm };

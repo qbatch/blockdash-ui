@@ -53,7 +53,7 @@ const NftDashboardWrapper = styled.div`
       letter-spacing: 0.02em;
       color: #1976d2;
     }
-    padding-right: 87px;
+    padding-right: 100px;
   }
   .nft-grid-title {
     h3 {

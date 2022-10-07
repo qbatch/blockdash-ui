@@ -2,9 +2,11 @@ import React from "react";
 import logo from "../../../static/images/logo.svg";
 import Dropdown from "react-bootstrap/Dropdown";
 import profileImg from '../../../static/images/profile.svg';
+import { useNavigate } from "react-router-dom";
 import { HeaderWrappper } from "../style";
 const Header = (props) => {
   const { onClick, login } = props;
+  let navigate = useNavigate();
   return (
     <HeaderWrappper className="d-flex align-items-center">
       <div className="header-wrapper d-flex justify-content-between align-items-center">
@@ -17,13 +19,13 @@ const Header = (props) => {
         </div>
         <ul className="d-flex header-menu">
           <li>
-            <a href="dashboard">Dashboard</a>
+            <a href="javascript:;" onClick={()=>  navigate("/dashboard")}>Dashboard</a>
           </li>
           <li>
-            <a href="nft-dashboard">NFT Dashboard</a>
+            <a onClick={()=>  navigate("/nft-dashboard")} href="javascript:;">NFT Dashboard</a>
           </li>
           <li>
-            <a href="wallet">Add a Wallet</a>
+            <a onClick={()=>  navigate("/wallet")} href="javascript:;">Add a Wallet</a>
           </li>
         </ul>
         <div className="header-links">

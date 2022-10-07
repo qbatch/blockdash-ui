@@ -47,9 +47,9 @@ const Index = () => {
         element={<DashboardLayout Component={Payment} />}
         />
         <Route
-        path="/account-mangement"
+        path="/account-management"
         exact
-        key="/account-mangement"
+        key="/account-management"
         element={<DashboardLayout Component={AccountMangement} />}
       />
       <Route

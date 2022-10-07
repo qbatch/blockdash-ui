@@ -3,7 +3,6 @@ import { useState } from "react";
 import Button from "../../../components/button/button.styled";
 import Input from "../../../components/inputs/input/index";
 import PasswordInput from "../../../components/inputs/passwordInput/index";
-import CheckBox from "../../../components/checkbox/index";
 import MetaMask from "../../../static/images/metamask.svg";
 import CoinBaseWallet from "../../../static/images/coinbasewallet.svg";
 import CoinBase from "../../../static/images/coinbase.svg";

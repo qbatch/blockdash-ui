@@ -16,6 +16,7 @@ const StateBox = styled.div`
     }
   }
   .stat-header {
+    margin-bottom:16px;
     img {
       margin-right: 12px;
     }
@@ -25,7 +26,7 @@ const StateBox = styled.div`
       line-height: 24px;
       letter-spacing: 0.04em;
       color: ${({ theme }) => theme.colors.labelColor};
-      margin-bottom: 20px;
+      margin-bottom: 4px;
     }
     h4 {
       font-weight: 500;
@@ -37,10 +38,16 @@ const StateBox = styled.div`
       display: flex;
       align-items: center;
       gap: 15px;
-      margin-bottom: 16px;
+      /* margin-bottom: 16px; */
       i {
         color: #1976d2;
         font-size: 20px;
+      }
+    }
+    .stat-header-left{
+   
+      h4{
+        margin-bottom: 0;
       }
     }
   }
@@ -144,6 +151,9 @@ const StateBox = styled.div`
       width: 110px;
       margin-right: 24px;
       height: 152px;
+      &.no-bg{{
+        background:transparent;
+      }}
     }
   }
 

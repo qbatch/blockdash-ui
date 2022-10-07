@@ -200,6 +200,7 @@ const Referral = () => {
                 open={copyLink}
                 maxWidth="xs"
                 onClose={()=>setCopyLink(false)}
+                closeButton
 
             >
                 <Box display="flex" alignItems="center" justifyContent="center" flexDirection="column">

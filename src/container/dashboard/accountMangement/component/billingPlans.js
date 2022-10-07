@@ -178,7 +178,6 @@ const BillingPlans = () => {
                     position: "relative"
                 }}>
                     <h3 className="payement-heading">Payment Method</h3>
-                    <span className="flow-check">FLOW CHECK, DELETE AND ADD</span>
 
                     <Stack direction="row" spacing={2} justifyContent="flex-start" alignItems="center" mt={3}>
                         <Box position="relative">

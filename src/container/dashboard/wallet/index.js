@@ -18,7 +18,7 @@ import { BsExclamationTriangle } from "react-icons/bs";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Modal from "../../../components/modal/index";
-
+import { useNavigate } from "react-router-dom";
 import { DashboardWrapper, PageHeader, WalletSource } from "../style";
 import { WalletCard } from "./style";
 
@@ -34,6 +34,7 @@ const Index = () => {
   const open = Boolean(anchorEl);
   const [popup, setPopup] = useState(false);
   const [popupstatic, setstaticPopup] = useState(false);
+  let navigate = useNavigate();
   const handleClickPopup = () => {
     setPopup(true);
     handleClose();
@@ -95,7 +96,7 @@ const Index = () => {
                         </Menu>
                       </li>
                       <li>
-                        <i className="icon-arrow-right"></i>
+                        <i onClick={()=>  navigate("/walletDetails")} className="icon-arrow-right"></i>
                       </li>
                     </ul>
                   </div>
@@ -356,6 +357,7 @@ const Index = () => {
           closeText="Cancel"
           onClose={() => setPopup(false)}
           header="Wallet Addresses"
+          dialogActions
         >
           <Input
             label="Enter Address"
@@ -373,6 +375,7 @@ const Index = () => {
           closeText="Cancel"
           onClose={() => setstaticPopup(false)}
           header="Static Asset"
+          dialogActions
         >
           <Input
             label="Enter Asset Name"
