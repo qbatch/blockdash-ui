@@ -220,13 +220,37 @@ padding-top:6px;
             div{
                 min-width:290px;
                 color: ${({ theme }) => theme.colors.bodyText}; 
+                margin-bottom:0;
                 span:nth-child(1){
                     padding-bottom:16px;
                 }
+                p{
+                    min-height:40px ;
+                    margin-bottom:0 ;
+                    border:1px solid transparent;
+                    padding:12.4px 0px
+                }
+            }
+            .MuiInputBase-root{
+                .MuiOutlinedInput-input {
+                font-size:13px;
+                height:40px;
+                padding:0 16px;
+                }
+             
             }
         }
         .add-bio{
             color: ${({ theme }) => theme.colors.bodyText}; 
+            .bio{
+                    padding-bottom:16px;
+                }
+            p{
+                min-height:40px ;  
+                margin-bottom:0 ;
+                border:1px solid transparent;
+                padding:12.4px 0;
+            }
         }
         .profile-divder{
             border-color:#707070 ;
