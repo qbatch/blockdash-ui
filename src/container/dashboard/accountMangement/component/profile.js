@@ -14,11 +14,11 @@ const Profile = () => {
                 <h1 className="heading">Profile</h1>
                 <Button variant="outlined" onClick={() => setProfileEdit(!profileEdit)}>{!profileEdit ? "Edit Profile" : "Save"}</Button>
             </Box>
-            <Grid container className="user-info" spacing={2}>
+            <Grid container className="user-info" columnSpacing={2}>
                 <Grid item md={4}>
                     <Box display="flex" flexDirection="column">
                         <span>Full Name</span>
-                        {!profileEdit && <span>Alec Thompson</span>}
+                        {!profileEdit && <p>Alec Thompson</p>}
                         {profileEdit && <TextField
                             fullWidth
                             value={"Alec Thompson"}
@@ -29,7 +29,7 @@ const Profile = () => {
                 <Grid item md={4}>
                     <Box display="flex" flexDirection="column">
                         <span>Email</span>
-                        {!profileEdit && <span>alecthompson@gmail.com</span>}
+                        {!profileEdit && <p>alecthompson@gmail.com</p>}
                         {profileEdit && <TextField
                             fullWidth
                             value={"alecthompson@gmail.com"}
@@ -40,7 +40,7 @@ const Profile = () => {
                 <Grid item md={4}>
                     <Box display="flex" flexDirection="column">
                         <span>Password</span>
-                        {!profileEdit && <span>*******</span>}
+                        {!profileEdit && <p>*******</p>}
                         {profileEdit && <TextField
                             ripple
                             fullWidth
@@ -50,10 +50,10 @@ const Profile = () => {
                     </Box>
                 </Grid>
                 <Grid item md={12}>
-                    <Box className="add-bio">
-                        <p>
+                    <Box className="add-bio" mt={2}>
+                        <div className="bio">
                             Bio
-                        </p>
+                        </div>
                         {!profileEdit && <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitLorem ipsum dolor sit amet, consectetur adipiscing ”</p>}
                         {profileEdit && <TextField
                             fullWidth

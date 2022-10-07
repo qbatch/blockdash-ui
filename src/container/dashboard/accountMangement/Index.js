@@ -9,7 +9,7 @@ import Referral from "./component/referral";
 import Profile from  "./component/profile"
 import { DashboardWrapper } from "../style";
 const Index = () => {
-    const [selected, setSelected] = useState("referral")
+    const [selected, setSelected] = useState("profile")
     const lists = [
         {
             title: "Owned NFTs",
