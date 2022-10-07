@@ -32,7 +32,7 @@ const InputWrapper = styled.div`
   margin-bottom: 24px;
   position: relative;
   &.password-input {
-    &.password-input-primary{
+    &.password-input-primary {
       margin-bottom: 31px;
     }
     .password-icon {
@@ -55,7 +55,7 @@ const InputWrapper = styled.div`
       p {
         opacity: 0;
         height: 0;
-        display:none;
+        display: none;
       }
     }
     .d-flex {
@@ -78,7 +78,6 @@ const InputWrapper = styled.div`
             &:last-of-type {
               border-top-right-radius: 6px;
               border-bottom-right-radius: 6px;
-              
             }
             &:nth-child(2n) {
               display: none;
@@ -111,7 +110,7 @@ const InputWrapper = styled.div`
       color: #485666;
       padding-left: 2px;
       padding-right: 4px;
- 
+
       transform: translate(14px, 8px) scale(1);
       &.Mui-focused {
         /* color: ${({ theme }) => theme.colors.labelColor}; */
@@ -124,7 +123,8 @@ const InputWrapper = styled.div`
     }
     .MuiInputBase-root {
       border: 1px solid #485666;
-      input,textarea {
+      input,
+      textarea {
         /* border: 1px solid ${({ theme }) => theme.colors.secondaryVariant}; */
         font-weight: 300;
         line-height: 24px;
@@ -147,12 +147,26 @@ const InputWrapper = styled.div`
         .card-input-wrapper & {
           padding-left: 44px;
         }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          /* -webkit-box-shadow: 0 0 0 30px yellow inset !important; */
+        }
       }
-      &.MuiInputBase-multiline{
-        max-height:96px;
+      .MuiInputBase-input {
+        &:-webkit-autofill {
+          border: 1px solid rgba(0, 0, 0, 0.23);
+          -webkit-text-fill-color: #BFCBD1;
+          /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+          transition: background-color 5000s ease-in-out 0s;
+        }
       }
-      textarea{
-        padding:0;
+      &.MuiInputBase-multiline {
+        max-height: 96px;
+      }
+      textarea {
+        padding: 0;
       }
       &.Mui-focused {
         border: 1px solid #485666;

@@ -1,13 +1,11 @@
 import React from "react";
-import { useState } from "react";
 import Button from "../../../components/button/button.styled";
 import Input from "../../../components/inputs/input/index";
-import PasswordInput from "../../../components/inputs/passwordInput/index";
 import { Box } from "@mui/system";
-import { AuthConnect } from "../style";
-import { Row, Col } from 'react-bootstrap';
 import ResetPassword from "../index";
+import { useNavigate } from "react-router-dom";
 const Index = () => {
+  let navigate = useNavigate();
   return (
     <>
       <ResetPassword>
@@ -35,7 +33,7 @@ const Index = () => {
               </Button>
               <div className="already-account">
                 <label>
-                Don’t have an account! <a href="sign-up">Sign Up</a>
+                Don’t have an account! <a href="javascript:;" onClick={() => navigate("/auth/sign-up")}>Sign Up</a>
                 </label>
               </div>
             </div>

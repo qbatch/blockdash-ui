@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import accountBanner from '../../../static/images/account-banner.png';
 const UpperHeader = styled.div`
 .upper-header{
     background:${({ theme }) => theme.colors.gradient};
     height: 192px;
     width:100%;
     border-radius: 12px 12px 0px 0px;
+    background-image:url(${accountBanner});
 }
 .header-info{
     margin-left: 25px;

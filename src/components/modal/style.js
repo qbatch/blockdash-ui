@@ -16,8 +16,44 @@ const ModalWrapper = styled(Dialog)`
   .MuiDialogContent-root {
     padding-top: 0;
     padding-bottom: 24px;
+    .MuiIconButton-root{
+      padding:0;
+      right:32px;
+      top:32px;
+      svg{
+        margin-bottom:0;
+        color:#019371;
+      }
+    }
+    .MuiBox-root {
+      max-width: 296px;
+      margin: 0 auto;
+    }
+    svg {
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 0.02em;
+      color: #eff2f3;
+      margin-bottom: 24px;
+    }
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      /* or 150% */
+
+      text-align: center;
+
+      /* H1 Color */
+
+      color: #eff2f3;
+    }
   }
-  .MuiDialog-root{
+  .MuiDialog-root {
     padding-bottom: 32px;
     border-bottom: 0px;
   }
@@ -36,12 +72,22 @@ const ModalWrapper = styled(Dialog)`
   &.modal-wallet {
     .MuiDialog-paper {
       max-width: 464px;
-      width:100%;
+      width: 100%;
+    }
+  }
+  &.congratulation-modal {
+    .MuiDialog-paper {
+      max-width: 482px;
+      width: 100%;
+    }
+    .MuiDialogContent-root {
+      padding-top: 48px;
+      padding-bottom: 8px;
     }
   }
   &.cancel-modal {
-    .MuiDialogContent-root{
-      padding-top:48px;
+    .MuiDialogContent-root {
+      padding-top: 48px;
     }
     .MuiDialogContent-root {
       text-align: center;
@@ -74,7 +120,11 @@ const ModalWrapper = styled(Dialog)`
         display: block;
       }
     }
-
+  }
+  .congratulation-modal {
+    svg {
+      margin-bottom: 48px;
+    }
   }
 `;
 export { ModalWrapper };

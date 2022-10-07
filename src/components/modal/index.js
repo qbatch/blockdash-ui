@@ -64,10 +64,11 @@ const Index = (props) => {
       </DialogContent>
       {dialogActions && (
         <DialogActions>
-          <Grid container spacing={3} direction={btnDirection}>
-            <Grid item md={6} xs={12}>
+          <Grid container spacing={3} direction={btnDirection} justifyContent="center">
+          {closeText &&
+            <Grid className={!saveText ? 'text-center':''} item md={!saveText ? '12':'6'} xs={12}>
               <Button
-                className="w-100"
+                className={!saveText ? '':'w-100'}
                 variant={btnCloseVariant ? btnCloseVariant : "text"}
                 autoFocus
                 onClick={onClose}
@@ -75,9 +76,11 @@ const Index = (props) => {
                 {closeText}
               </Button>
             </Grid>
-            <Grid item md={6} xs={12}>
+          }
+           {saveText && 
+            <Grid className={!closeText ? 'text-center':''} item md={!closeText ? '12':'6'} xs={12}>
               <Button
-                className="w-100"
+                className={!closeText ? '':'w-100'}
                 variant={btnSaveVariant ? btnSaveVariant : "contained"}
                 autoFocus
                 onClick={onSave}
@@ -85,6 +88,7 @@ const Index = (props) => {
                 {saveText}
               </Button>
             </Grid>
+            }
           </Grid>
         </DialogActions>
       )}

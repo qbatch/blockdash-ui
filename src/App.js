@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import AuthRoute from "../src/routes/AuthRoute";
 import AppRoute from "../src/routes/AppRoute";
 import GlobalStyles from "./config/theme/global.styled";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import { darkTheme, lightTheme } from "../src/config/theme/themeVariables"
 
 function App() {

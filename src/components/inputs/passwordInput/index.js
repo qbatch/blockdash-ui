@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PasswordStrengthBar from "react-password-strength-bar";
 import TextField from "@mui/material/TextField";
 import { InputWrapper } from "../style";
-import { Form } from "react-bootstrap";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 const Index = (props) => {
   const { label, inputStatus, inputInfo, status, placeholder, strength, className } = props;

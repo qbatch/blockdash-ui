@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "react-pro-sidebar/dist/css/styles.css";
 import Header from "./header/header";
 import { Content } from "./style";
 import Footer from "./footer/footer";

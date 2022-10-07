@@ -2,6 +2,11 @@ import * as theme from "./themeVariables";
 import { createGlobalStyle, ThemeConsumer } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
     body{
         background-color: ${({ theme }) => theme.colors.background};
         font-size:${({ theme }) => theme.colors.baseFontSize};
@@ -10,7 +15,8 @@ const GlobalStyles = createGlobalStyle`
         line-height:normal;
         font-feature-settings: inherit;
         font-variant:inherit;
-        color:${({ theme }) => theme.colors.whiteColor}
+        color:${({ theme }) => theme.colors.whiteColor};
+        box-sizing:border-box;
     }
     h1,h2,h3,h4,h5,h6{
         font-weight:700;
@@ -120,6 +126,25 @@ const GlobalStyles = createGlobalStyle`
                 }
             }
         /* } */
+    }
+    /* Helper Classes */
+    .d-flex{
+        display: flex!important;
+    }
+    .align-items-center{
+        align-items: center!important;
+    }
+    .justify-content-center{
+        justify-content: center!important;
+    }
+    .w-100 {
+    width: 100%!important;
+    }
+    .justify-content-between{
+        justify-content: space-between!important;
+    }
+    .text-center{
+        text-align: center!important;
     }
 `;
 export default GlobalStyles;

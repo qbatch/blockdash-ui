@@ -1,19 +1,17 @@
 import React from "react";
 import { useState } from "react";
 import Button from "../../../components/button/button.styled";
-import Select from "../../../components/select/index";
 import Input from "../../../components/inputs/input/index";
 import PasswordInput from "../../../components/inputs/passwordInput/index";
-import PhoneInput from "../../../components/inputs/phoneInput/index";
 import MetaMask from "../../../static/images/metamask.svg";
 import CoinBaseWallet from "../../../static/images/coinbasewallet.svg";
 import CoinBase from "../../../static/images/coinbase.svg";
 import { Box } from "@mui/system";
 import { AuthConnect } from "../style";
-
-import { Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import SignUp from "../index";
 const Index = () => {
+  let navigate = useNavigate();
   const State = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -89,7 +87,7 @@ const Index = () => {
               </AuthConnect>
               <div className="already-account">
                 <label>
-                  Already have an account! <a href="sign-in">Sign In</a>
+                  Already have an account! <a onClick={() => navigate("/auth/sign-in")} href="javascript:;">Sign In</a>
                 </label>
               </div>
             </div>

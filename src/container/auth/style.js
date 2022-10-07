@@ -121,6 +121,8 @@ const AuthWrapper = styled.div`
       }
     }
     .forgot-password-link {
+      display:flex;
+      justify-content: end;
       a {
         color: ${({ theme }) => theme.colors.secondaryColor};
         font-weight: 700;

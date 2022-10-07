@@ -121,6 +121,10 @@ height:auto;
 						}
 					}
 				}
+				img{
+					border-radius:55%;
+					cursor:pointer;
+				}
 			}
 		}
 	}

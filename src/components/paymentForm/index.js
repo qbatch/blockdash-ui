@@ -8,7 +8,7 @@ import PaymentFormWrapper from "./style";
 import IconMastercard from "../../static/images/mastercard.svg";
 
 const Index = (props) => {
-  const { Children } = props;
+  const { Children, onClick } = props;
   return (
     <PaymentFormWrapper>
       <Box className="payment-form">
@@ -37,7 +37,7 @@ const Index = (props) => {
               <Input placeholder="CVC" label="CVC" />
             </Grid>
             <Grid item md={12}>
-              <Button className="w-100" variant="outlined">
+              <Button onClick={onClick} className="w-100" variant="outlined">
                 Checkout
               </Button>
             </Grid>

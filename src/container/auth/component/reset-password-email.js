@@ -1,10 +1,10 @@
 import React from "react";
-import Button from "../../../components/button/button.styled";
 import VerficationEmail from "../index";
 import Verification from "../../../static/images/verification.svg";
 import { Box } from "@mui/system";
-import { AuthConnect } from "../style";
+import { useNavigate } from "react-router-dom";
 const Index = () => {
+  let navigate = useNavigate();
   return (
     <>
       <VerficationEmail>
@@ -30,7 +30,7 @@ const Index = () => {
             <div className="bottom-content">
               <div className="already-account">
                 <label>
-                  Don’t have an account!<a href="sign-up">Sign Up</a>
+                  Don’t have an account! <a href="javascript:;" onClick={() => navigate("/auth/sign-up")}> Sign Up</a>
                 </label>
               </div>
             </div>

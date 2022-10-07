@@ -8,10 +8,11 @@ import CoinBaseWallet from "../../../static/images/coinbasewallet.svg";
 import CoinBase from "../../../static/images/coinbase.svg";
 import { Box } from "@mui/system";
 import { AuthConnect } from "../style";
+import { useNavigate } from "react-router-dom";
 
-import { Row, Col } from "react-bootstrap";
 import SignIn from "../index";
 const Index = () => {
+  let navigate = useNavigate();
   const State = [
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -29,7 +30,10 @@ const Index = () => {
         <div className="auth-content">
           <div className="auth-heading">
             <h1>Sign In</h1>
-            <p>Login with your email / phone and password. <i className="icon-info"></i></p>
+            <p>
+              Login with your email / phone and password.{" "}
+              <i className="icon-info"></i>
+            </p>
           </div>
           <Box className="auth-content-top">
             <Input
@@ -41,15 +45,16 @@ const Index = () => {
               label="Password"
               placeholder="Password"
               inputStatus="Incorrect password!"
-              status="danger" className="password-input-primary"
+              status="danger"
+              className="password-input-primary"
             />
-            <label className="d-flex justify-content-end forgot-password-link">
-              <a href="reset-password">Forget your password</a>
+            <label className="forgot-password-link">
+              <a onClick={() => navigate("/auth/reset-password")} href="javascript:;">Forget your password</a>
             </label>
           </Box>
           <Box className="auth-content-bottom">
             <div className="bottom-content">
-              <Button 
+              <Button
                 variant="outlined"
                 color="primary"
                 size="large"
@@ -84,7 +89,7 @@ const Index = () => {
               </AuthConnect>
               <div className="already-account">
                 <label>
-                  Already have an account! <a href="sign-in">Sign In</a>
+                  Don’t have an account! <a href="javascript:;" onClick={() => navigate("/auth/sign-up")}>Sign Up</a>
                 </label>
               </div>
             </div>

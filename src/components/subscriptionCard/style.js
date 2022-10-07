@@ -111,6 +111,9 @@ const SubscriptionCardWrapper = styled.div`
   }
   &.active {
     background: linear-gradient(90deg, #1976d2 0%, #009470 100%);
+    &:before{
+      display:none;
+    }
     .subscription-card-header {
       small {
         color: ${({ theme }) => theme.colors.bodyText};

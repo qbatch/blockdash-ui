@@ -1,8 +1,5 @@
 import React from "react";
 import Button from "../../../components/button/button";
-import Input from "../../../components/inputs/input/index";
-import { Row, Col } from "react-bootstrap";
-import PasswordInput from "../../../components/inputs/passwordInput/index";
 import Terms from "../index";
 const Index = () => {
   return (
